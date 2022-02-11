@@ -1,0 +1,7 @@
+{
+  "version": 2,
+  "projects": {
+    "poetry-app": "apps/poetry-app",
+    "poetry-app-e2e": "apps/poetry-app-e2e"
+  }
+}
