@@ -1,7 +1,10 @@
 {
   "version": 2,
   "projects": {
+    "models": "libs/models",
     "poetry-app": "apps/poetry-app",
-    "poetry-app-e2e": "apps/poetry-app-e2e"
+    "poetry-app-e2e": "apps/poetry-app-e2e",
+    "services": "libs/services",
+    "store": "libs/store"
   }
 }

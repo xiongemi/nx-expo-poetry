@@ -17,12 +17,7 @@
     "default": {
       "runner": "@nrwl/nx-cloud",
       "options": {
-        "cacheableOperations": [
-          "build",
-          "lint",
-          "test",
-          "e2e"
-        ],
+        "cacheableOperations": ["build", "lint", "test", "e2e"],
         "accessToken": "NTk3ZWJmYWYtYzA5YS00ZjdkLTgzODUtMjgwMzVhNjZjNmY4fHJlYWQtd3JpdGU="
       }
     }
@@ -35,5 +30,5 @@
       }
     ]
   },
-  "defaultProject": "peotry-app"
+  "defaultProject": "poetry-app"
 }
