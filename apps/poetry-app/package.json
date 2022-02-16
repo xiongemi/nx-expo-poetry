@@ -3,25 +3,25 @@
   "version": "0.0.1",
   "private": true,
   "dependencies": {
+    "@expo/metro-config": "*",
+    "@nrwl/expo": "*",
     "@testing-library/jest-native": "*",
     "@testing-library/react-native": "*",
-    "react-native": "*",
     "expo": "*",
     "expo-dev-client": "*",
-    "expo-status-bar": "*",
     "expo-splash-screen": "*",
+    "expo-status-bar": "*",
     "expo-structured-headers": "*",
     "expo-updates": "*",
+    "react": "*",
+    "react-native": "*",
     "react-native-gesture-handler": "*",
+    "react-native-paper": "*",
     "react-native-reanimated": "*",
     "react-native-safe-area-context": "*",
     "react-native-screens": "*",
     "react-native-svg": "*",
-    "react-native-web": "*",
-    "@nrwl/expo": "*",
-    "@expo/metro-config": "*",
-    "react": "*",
-    "react-native-paper": "*"
+    "react-native-web": "*"
   },
   "scripts": {
     "eas-build-pre-install": "cd ../../ && npm install && cp package-lock.json ./apps/poetry-app/ && mv ./apps/poetry-app/eas.js ./index.js"
