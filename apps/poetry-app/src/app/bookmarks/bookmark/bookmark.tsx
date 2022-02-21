@@ -1,21 +1,27 @@
-import { Poem } from '@nx-expo-poetry/models';
+import { BookmarksEntity } from '@nx-expo-poetry/store';
 import React from 'react';
 import { List, IconButton, Colors } from 'react-native-paper';
 
 export interface BookmarksProps {
-  poem: Poem;
+  formattedDate: string;
+  bookmark: BookmarksEntity;
+  removeBookmark: (bookmark: BookmarksEntity) => void;
 }
 
-export function Bookmark({ poem }: BookmarksProps) {
+export function Bookmark({
+  bookmark,
+  formattedDate,
+  removeBookmark,
+}: BookmarksProps) {
   return (
     <List.Item
-      title={poem.title}
-      description={poem?.lines[0] + '...'}
+      title={bookmark.title}
+      description={formattedDate + '\n' + bookmark?.lines[0] + '...'}
       right={() => (
         <IconButton
           icon="minus-circle"
           color={Colors.red500}
-          onPress={() => console.log('Pressed')}
+          onPress={() => removeBookmark(bookmark)}
         />
       )}
     />

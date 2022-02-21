@@ -1,4 +1,4 @@
-import { Poem } from '@nx-expo-poetry/models';
+import { LoadingStatus, Poem } from '@nx-expo-poetry/models';
 import {
   mapPoemResponseToPoem,
   PoemResponse,
@@ -16,7 +16,7 @@ import { RootState } from '../root/root-state.interface';
 export const POEM_OF_THE_DAY_FEATURE_KEY = 'poemOfTheDay';
 
 export interface PoemOfTheDayState {
-  loadingStatus: 'not loaded' | 'loading' | 'loaded' | 'error';
+  loadingStatus: LoadingStatus;
   poem?: Poem;
   error?: string;
 }
@@ -81,4 +81,13 @@ const getPoemOfTheDay = createSelector(
   (state: PoemOfTheDayState) => state.poem
 );
 
-export const poemOfTheDaySelelctors = { getPoemOfTheDayState, getPoemOfTheDay };
+const getPoemOfTheDayLoadingStatus = createSelector(
+  getPoemOfTheDayState,
+  (state: PoemOfTheDayState): LoadingStatus => state.loadingStatus
+);
+
+export const poemOfTheDaySelelctors = {
+  getPoemOfTheDayState,
+  getPoemOfTheDay,
+  getPoemOfTheDayLoadingStatus,
+};

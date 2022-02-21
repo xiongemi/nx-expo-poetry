@@ -1,11 +1,11 @@
 import { render } from '@testing-library/react-native';
 import React from 'react';
 
-import Bookmark from './bookmark';
+import Loading from './show-loading';
 
-describe('Bookmark', () => {
+describe('Loading', () => {
   it('should render successfully', () => {
-    const { container } = render(<Bookmark />);
+    const { container } = render(<Loading />);
     expect(container).toBeTruthy();
   });
 });

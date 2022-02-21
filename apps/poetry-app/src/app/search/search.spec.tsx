@@ -1,11 +1,11 @@
 import { render } from '@testing-library/react-native';
 import React from 'react';
 
-import Bookmark from './bookmark';
+import Search from './search';
 
-describe('Bookmark', () => {
+describe('Search', () => {
   it('should render successfully', () => {
-    const { container } = render(<Bookmark />);
+    const { container } = render(<Search />);
     expect(container).toBeTruthy();
   });
 });

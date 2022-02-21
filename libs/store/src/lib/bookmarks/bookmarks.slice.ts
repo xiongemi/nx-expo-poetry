@@ -11,9 +11,9 @@ import { RootState } from '../root/root-state.interface';
 
 export const BOOKMARKS_FEATURE_KEY = 'bookmarks';
 
-export interface BookmarksEntity {
-  id: number;
-  poem: Poem;
+export interface BookmarksEntity extends Poem {
+  id: string;
+  formattedDate: string;
 }
 
 export interface BookmarksState extends EntityState<BookmarksEntity> {
@@ -57,11 +57,7 @@ const selectBookmarksEntities = createSelector(
   selectEntities
 );
 
-const selectBookmarksPoems = createSelector(
+export const bookmarksSelectors = {
+  selectAllBookmarks,
   selectBookmarksEntities,
-  (entities: Dictionary<BookmarksEntity>) => {
-    return Object.values(entities).map(entity => entity?.poem);
-  }
-);
-
-export const bookmarksSelectors = { selectBookmarksPoems };
+};

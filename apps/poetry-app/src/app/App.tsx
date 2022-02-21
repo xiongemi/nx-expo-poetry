@@ -3,8 +3,9 @@ import {
   createRootStore,
   transformEntityStateToPersist,
 } from '@nx-expo-poetry/store';
+import { Loading } from '@nx-expo-poetry/ui';
 import AsyncStorage from '@react-native-async-storage/async-storage';
-import { NavigationContainer, useNavigation } from '@react-navigation/native';
+import { NavigationContainer } from '@react-navigation/native';
 import { createNativeStackNavigator } from '@react-navigation/native-stack';
 import { createMemoryHistory, History } from 'history';
 import React from 'react';
@@ -19,7 +20,6 @@ import { PersistGate } from 'redux-persist/integration/react';
 import bookmarks from './bookmarks/bookmarks';
 import PoemOfTheDay from './poem-of-the-day/poem-of-the-day';
 import { AppRoutes } from './shared/app-routes.enum';
-import Loading from './shared/loading/loading';
 
 const App = () => {
   const persistConfig = {
@@ -37,7 +37,7 @@ const App = () => {
     colors: {
       ...DefaultTheme.colors,
       primary: '#855913',
-      accent: '#0111B6',
+      accent: '#aec5c5',
     },
   };
 

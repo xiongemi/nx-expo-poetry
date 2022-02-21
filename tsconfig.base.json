@@ -17,7 +17,8 @@
     "paths": {
       "@nx-expo-poetry/models": ["libs/models/src/index.ts"],
       "@nx-expo-poetry/services": ["libs/services/src/index.ts"],
-      "@nx-expo-poetry/store": ["libs/store/src/index.ts"]
+      "@nx-expo-poetry/store": ["libs/store/src/index.ts"],
+      "@nx-expo-poetry/ui": ["libs/ui/src/index.ts"]
     }
   },
   "exclude": ["node_modules", "tmp"]

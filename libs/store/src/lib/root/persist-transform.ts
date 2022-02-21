@@ -1,13 +1,15 @@
 import { EntityState } from '@reduxjs/toolkit';
 import { createTransform } from 'redux-persist';
 
+import { BOOKMARKS_FEATURE_KEY } from '../bookmarks/bookmarks.slice';
+
 const transformEntityStateToPersist = createTransform(
   // transform state on its way to being serialized and persisted.
   (
     entityState: EntityState<any>
   ): {
     ids: string;
-    entities: string;
+    entities: any;
   } => {
     return {
       ...entityState,
@@ -22,7 +24,9 @@ const transformEntityStateToPersist = createTransform(
       ids: JSON.parse(entityState.ids),
       entities: JSON.parse(entityState.entities),
     };
-  }
+  },
+  // define which reducers this transform gets called for.
+  { whitelist: [BOOKMARKS_FEATURE_KEY] }
 );
 
 export { transformEntityStateToPersist };

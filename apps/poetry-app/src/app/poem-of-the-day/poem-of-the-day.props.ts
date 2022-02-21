@@ -1,13 +1,16 @@
+import { Poem } from '@nx-expo-poetry/models';
 import {
   RootState,
   poemOfTheDaySelelctors,
   fetchPoemOfTheDay,
+  bookmarksActions,
 } from '@nx-expo-poetry/store';
 import { AnyAction, ThunkDispatch } from '@reduxjs/toolkit';
 
 const mapStateToProps = (state: RootState) => {
   return {
     poem: poemOfTheDaySelelctors.getPoemOfTheDay(state),
+    loadingStatus: poemOfTheDaySelelctors.getPoemOfTheDayLoadingStatus(state),
   };
 };
 
@@ -17,6 +20,16 @@ const mapDispatchToProps = (
   return {
     fetchPoemOfTheDay() {
       dispatch(fetchPoemOfTheDay());
+    },
+    bookmark(formattedDate: string, poem: Poem) {
+      dispatch(
+        bookmarksActions.add({
+          ...poem,
+          formattedDate,
+          id: encodeURI(poem.title),
+          lines: poem.lines.slice(0, 1),
+        })
+      );
     },
   };
 };
