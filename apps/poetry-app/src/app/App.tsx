@@ -46,9 +46,9 @@ const App = () => {
   const Stack = createNativeStackNavigator<RootStackParamList>();
 
   return (
-    <StoreProvider store={store}>
+    <PaperProvider theme={theme}>
       <PersistGate loading={<Loading />} persistor={persistor}>
-        <PaperProvider theme={theme}>
+        <StoreProvider store={store}>
           <NavigationContainer>
             <Stack.Navigator initialRouteName={AppRoutes.PoemOfTheDay}>
               <Stack.Screen
@@ -67,9 +67,9 @@ const App = () => {
               <Stack.Screen name={AppRoutes.Search} component={Search} />
             </Stack.Navigator>
           </NavigationContainer>
-        </PaperProvider>
+        </StoreProvider>
       </PersistGate>
-    </StoreProvider>
+    </PaperProvider>
   );
 };
 
