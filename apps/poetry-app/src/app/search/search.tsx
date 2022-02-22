@@ -1,9 +1,11 @@
-import { Centre, PoemListItem, ShowLoading } from '@nx-expo-poetry/ui';
 import { RouteProp, useRoute } from '@react-navigation/native';
 import React, { useEffect } from 'react';
 import { SafeAreaView, ScrollView } from 'react-native';
 import { Headline, Searchbar } from 'react-native-paper';
 import { connect } from 'react-redux';
+import Centre from '../shared/centre/centre';
+import PoemListItem from '../shared/poem-list-item/poem-list-item';
+import ShowLoading from '../shared/show-loading/show-loading';
 
 import {
   mapDispatchToProps,

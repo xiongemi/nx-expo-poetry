@@ -5,7 +5,6 @@
     "poetry-app": "apps/poetry-app",
     "poetry-app-e2e": "apps/poetry-app-e2e",
     "services": "libs/services",
-    "store": "libs/store",
-    "ui": "libs/ui"
+    "store": "libs/store"
   }
 }

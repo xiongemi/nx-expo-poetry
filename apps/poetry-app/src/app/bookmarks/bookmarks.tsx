@@ -1,9 +1,11 @@
 import { BookmarksEntity } from '@nx-expo-poetry/store';
-import { Centre, FullHeight } from '@nx-expo-poetry/ui';
 import React, { useState } from 'react';
 import { SafeAreaView, ScrollView } from 'react-native';
 import { Avatar, Headline, Snackbar } from 'react-native-paper';
 import { connect } from 'react-redux';
+
+import Centre from '../shared/centre/centre';
+import FullHeight from '../shared/full-height/full-height';
 
 import Bookmark from './bookmark/bookmark';
 import {
