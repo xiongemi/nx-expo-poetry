@@ -19,6 +19,7 @@ export interface PoemCardProps {
   poem?: Poem;
   bookmark: (formattedDate: string, poem: Poem) => void;
   fetchPoemOfTheDay: () => void;
+  goToSearch: () => void;
 }
 
 export function PoemCard({
@@ -27,6 +28,7 @@ export function PoemCard({
   poem,
   bookmark,
   fetchPoemOfTheDay,
+  goToSearch,
 }: PoemCardProps) {
   const [bookmarked, setBookmarked] = useState<boolean>(false);
 
@@ -42,8 +44,10 @@ export function PoemCard({
         <ScrollView contentInsetAdjustmentBehavior="automatic">
           <ShowLoading
             showLoading={
-              !poem || ['not loaded' || 'loading'].includes(loadingStatus)
+              loadingStatus === 'not loaded' || loadingStatus === 'loading'
             }
+            hasError={loadingStatus === 'error'}
+            reload={fetchPoemOfTheDay}
           >
             <Card>
               <Card.Title
@@ -59,7 +63,9 @@ export function PoemCard({
                 <Button icon="skip-next" onPress={() => fetchPoemOfTheDay()}>
                   Next
                 </Button>
-                <Button icon="magnify">Search</Button>
+                <Button icon="magnify" onPress={goToSearch}>
+                  Search
+                </Button>
               </Card.Actions>
               <Card.Content>
                 <Centre>

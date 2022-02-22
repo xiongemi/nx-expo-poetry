@@ -7,6 +7,8 @@ import { initialRootState } from './root-state.initial';
 import { RootState } from './root-state.interface';
 import { createRootReducer } from './root.reducer';
 
+declare const process: any;
+
 export const createRootStore = (
   persistConfig: PersistConfig<RootState>,
   history: History

@@ -5,6 +5,7 @@ export interface PoemResponse {
   author: string;
   lines: string[];
   linecount: string;
+  similarity?: number;
 }
 
 export function mapPoemResponseToPoem(response: PoemResponse): Poem {

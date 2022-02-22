@@ -1,4 +1,3 @@
-import { Poem } from '@nx-expo-poetry/models';
 import { BookmarksEntity } from '@nx-expo-poetry/store';
 import { Centre, FullHeight } from '@nx-expo-poetry/ui';
 import React, { useState } from 'react';
@@ -35,9 +34,8 @@ export function Bookmarks({
           {bookmarks && bookmarks?.length ? (
             bookmarks.map(
               (bookmark: BookmarksEntity) =>
-                bookmark && (
+                bookmark && bookmark.poem && (
                   <Bookmark
-                    formattedDate={bookmark.formattedDate}
                     key={bookmark.id}
                     bookmark={bookmark}
                     removeBookmark={onRemoveBookmark}
@@ -68,7 +66,7 @@ export function Bookmarks({
           },
         }}
       >
-        Remove {currentlyRemovedBookmark?.title}
+        Remove {currentlyRemovedBookmark?.poem?.title}
       </Snackbar>
     </FullHeight>
   );

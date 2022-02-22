@@ -1,3 +1,4 @@
+export * from './lib/search/search.slice';
 export * from './lib/bookmarks/bookmarks.slice';
 export * from './lib/poem-of-the-day/poem-of-the-day.slice';
 export * from './lib/root/root.store';

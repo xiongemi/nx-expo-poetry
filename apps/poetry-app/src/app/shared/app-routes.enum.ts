@@ -1,4 +1,5 @@
 export enum AppRoutes {
   PoemOfTheDay = 'Poem of the Day',
-  Bookmarks = 'Bookmarks'
+  Bookmarks = 'Bookmarks',
+  Search = 'Search'
 }

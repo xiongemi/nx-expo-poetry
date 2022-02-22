@@ -3,7 +3,6 @@ import {
   createEntityAdapter,
   createSelector,
   createSlice,
-  Dictionary,
   EntityState,
 } from '@reduxjs/toolkit';
 
@@ -11,9 +10,10 @@ import { RootState } from '../root/root-state.interface';
 
 export const BOOKMARKS_FEATURE_KEY = 'bookmarks';
 
-export interface BookmarksEntity extends Poem {
+export interface BookmarksEntity {
   id: string;
   formattedDate: string;
+  poem: Poem;
 }
 
 export interface BookmarksState extends EntityState<BookmarksEntity> {

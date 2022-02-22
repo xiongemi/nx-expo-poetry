@@ -3,20 +3,19 @@ import React from 'react';
 import { List, IconButton, Colors } from 'react-native-paper';
 
 export interface BookmarksProps {
-  formattedDate: string;
   bookmark: BookmarksEntity;
   removeBookmark: (bookmark: BookmarksEntity) => void;
 }
 
 export function Bookmark({
   bookmark,
-  formattedDate,
   removeBookmark,
 }: BookmarksProps) {
   return (
     <List.Item
-      title={bookmark.title}
-      description={formattedDate + '\n' + bookmark?.lines[0] + '...'}
+      title={bookmark.poem.title}
+      descriptionNumberOfLines={3}
+      description={bookmark.formattedDate + '\n' + bookmark.poem.lines[0]}
       right={() => (
         <IconButton
           icon="minus-circle"

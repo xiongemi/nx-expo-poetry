@@ -24,10 +24,12 @@ const mapDispatchToProps = (
     bookmark(formattedDate: string, poem: Poem) {
       dispatch(
         bookmarksActions.add({
-          ...poem,
           formattedDate,
           id: encodeURI(poem.title),
-          lines: poem.lines.slice(0, 1),
+          poem: {
+            ...poem,
+            lines: poem.lines.slice(0, 1),
+          },
         })
       );
     },

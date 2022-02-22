@@ -17,9 +17,11 @@ import {
 import { Provider as StoreProvider } from 'react-redux';
 import { PersistGate } from 'redux-persist/integration/react';
 
-import bookmarks from './bookmarks/bookmarks';
+import Bookmarks from './bookmarks/bookmarks';
 import PoemOfTheDay from './poem-of-the-day/poem-of-the-day';
+import Search from './search/search';
 import { AppRoutes } from './shared/app-routes.enum';
+import { RootStackParamList } from './shared/root-stack-param-list.type';
 
 const App = () => {
   const persistConfig = {
@@ -41,7 +43,7 @@ const App = () => {
     },
   };
 
-  const Stack = createNativeStackNavigator();
+  const Stack = createNativeStackNavigator<RootStackParamList>();
 
   return (
     <StoreProvider store={store}>
@@ -61,7 +63,8 @@ const App = () => {
                   ),
                 })}
               />
-              <Stack.Screen name={AppRoutes.Bookmarks} component={bookmarks} />
+              <Stack.Screen name={AppRoutes.Bookmarks} component={Bookmarks} />
+              <Stack.Screen name={AppRoutes.Search} component={Search} />
             </Stack.Navigator>
           </NavigationContainer>
         </PaperProvider>

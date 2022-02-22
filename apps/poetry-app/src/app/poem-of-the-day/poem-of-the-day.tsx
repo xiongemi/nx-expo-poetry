@@ -1,7 +1,10 @@
 import { PoemCard } from '@nx-expo-poetry/ui';
+import { useNavigation } from '@react-navigation/native';
 import { format } from 'date-fns';
 import React, { useEffect } from 'react';
 import { connect } from 'react-redux';
+
+import { AppRoutes } from '../shared/app-routes.enum';
 
 import {
   mapDispatchToProps,
@@ -17,6 +20,7 @@ export function PoemOfTheDay({
 }: PoemOfTheDayProps) {
   const date = new Date();
   const formattedDate = format(date, 'MMMM do, yyyy');
+  const navigation = useNavigation();
 
   useEffect(() => {
     fetchPoemOfTheDay();
@@ -29,6 +33,7 @@ export function PoemOfTheDay({
       formattedDate={formattedDate}
       poem={poem}
       bookmark={bookmark}
+      goToSearch={() => navigation.navigate(AppRoutes.Search, {search: ''})}
     />
   );
 }
