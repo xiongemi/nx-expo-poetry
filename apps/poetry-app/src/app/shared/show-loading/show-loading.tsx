@@ -1,12 +1,14 @@
 import React, { ReactNode } from 'react';
-import { ActivityIndicator, Avatar, Button, Headline, Subheading } from 'react-native-paper';
+import { Avatar, Button, Headline, Subheading } from 'react-native-paper';
 
 import { Centre } from '../centre/centre';
+import Loading from '../loading/loading';
+import Spacing from '../spacing/spacing';
 
 export interface ShowLoadingProps {
   showLoading: boolean;
   hasError: boolean;
-  reload: () => void;
+  reload?: () => void;
   children: ReactNode;
 }
 
@@ -17,15 +19,19 @@ export function ShowLoading({
   children,
 }: ShowLoadingProps) {
   return showLoading ? (
-    <Centre>
-      <ActivityIndicator animating={true} size="large" children={undefined} />
-    </Centre>
+    <Loading></Loading>
   ) : hasError ? (
     <Centre>
-      <Avatar.Icon size={40} icon="alert-circle" children={undefined} />
+      <Spacing>
+        <Avatar.Icon size={40} icon="alert-circle" children={undefined} />
+      </Spacing>
       <Headline>Oops~ Something went wrong</Headline>
       <Subheading>Make sure you got internet connection.</Subheading>
-      <Button onPress={reload}>Try Again</Button>
+      {reload && (
+        <Button onPress={reload} mode="contained">
+          Try Again
+        </Button>
+      )}
     </Centre>
   ) : (
     // eslint-disable-next-line react/jsx-no-useless-fragment

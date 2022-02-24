@@ -1,4 +1,5 @@
 import { LoadingStatus, Poem } from '@nx-expo-poetry/models';
+import { useNavigation } from '@react-navigation/native';
 import React, { useState } from 'react';
 import { SafeAreaView, ScrollView } from 'react-native';
 import {
@@ -8,6 +9,7 @@ import {
   Button,
   Snackbar,
 } from 'react-native-paper';
+import { AppRoutes } from '../app-routes.enum';
 
 import Centre from '../centre/centre';
 import FullHeight from '../full-height/full-height';
@@ -16,10 +18,10 @@ import ShowLoading from '../show-loading/show-loading';
 export interface PoemCardProps {
   loadingStatus: LoadingStatus;
   formattedDate: string;
-  poem?: Poem;
   bookmark: (formattedDate: string, poem: Poem) => void;
-  fetchPoemOfTheDay: () => void;
-  goToSearch: () => void;
+  poem?: Poem;
+  fetch?: () => void;
+  goToSearch: (searchQuery: string) => void;
 }
 
 export function PoemCard({
@@ -27,9 +29,10 @@ export function PoemCard({
   formattedDate,
   poem,
   bookmark,
-  fetchPoemOfTheDay,
+  fetch,
   goToSearch,
 }: PoemCardProps) {
+  const navigation = useNavigation();
   const [bookmarked, setBookmarked] = useState<boolean>(false);
 
   const onBookmarkPoem = () => {
@@ -47,7 +50,7 @@ export function PoemCard({
               loadingStatus === 'not loaded' || loadingStatus === 'loading'
             }
             hasError={loadingStatus === 'error'}
-            reload={fetchPoemOfTheDay}
+            reload={fetch}
           >
             <Card>
               <Card.Title
@@ -60,18 +63,22 @@ export function PoemCard({
                 <Button icon="heart-plus" onPress={onBookmarkPoem}>
                   Bookmark
                 </Button>
-                <Button icon="skip-next" onPress={() => fetchPoemOfTheDay()}>
-                  Next
-                </Button>
-                <Button icon="magnify" onPress={goToSearch}>
-                  Search
-                </Button>
+                {fetch && (
+                  <Button icon="skip-next" onPress={() => fetch()}>
+                    Next
+                  </Button>
+                )}
+                {goToSearch && (
+                  <Button icon="magnify" onPress={() => goToSearch('')}>
+                    Search
+                  </Button>
+                )}
               </Card.Actions>
               <Card.Content>
                 <Centre>
                   <Headline>{poem?.title}</Headline>
                   {poem?.author?.split(',')?.map((author, index) => (
-                    <Button key={index} onPress={() => console.log('Pressed')}>
+                    <Button key={index} onPress={() => goToSearch(author)}>
                       {author}
                     </Button>
                   ))}
@@ -82,7 +89,15 @@ export function PoemCard({
           </ShowLoading>
         </ScrollView>
       </SafeAreaView>
-      <Snackbar visible={bookmarked} onDismiss={() => setBookmarked(false)}>
+      <Snackbar
+        visible={bookmarked}
+        onDismiss={() => setBookmarked(false)}
+        duration={5000}
+        action={{
+          label: 'View All',
+          onPress: () => navigation.navigate(AppRoutes.Bookmarks),
+        }}
+      >
         Poem bookmarked!
       </Snackbar>
     </FullHeight>

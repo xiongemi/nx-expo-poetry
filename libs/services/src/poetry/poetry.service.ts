@@ -19,10 +19,14 @@ export async function getPoemOfTheDay(): Promise<PoemResponse[]> {
 }
 
 export async function getPoemsWithTitle(
-  title: string
+  title: string,
+  exactMatch = false
 ): Promise<PoemResponse[]> {
   const response: Response = await fetch(
-    POETRY_BASE_URL + 'title/' + encodeURIComponent(title),
+    POETRY_BASE_URL +
+      'title/' +
+      encodeURIComponent(title) +
+      `${exactMatch ? ':abs' : ''}`,
     {
       method: 'GET',
     }

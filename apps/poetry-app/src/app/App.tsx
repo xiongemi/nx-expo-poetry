@@ -16,8 +16,10 @@ import {
 import { Provider as StoreProvider } from 'react-redux';
 import { PersistGate } from 'redux-persist/integration/react';
 
+import Bookmark from './bookmark/bookmark';
 import Bookmarks from './bookmarks/bookmarks';
 import PoemOfTheDay from './poem-of-the-day/poem-of-the-day';
+import PoemResult from './poem-result/poem-result';
 import Search from './search/search';
 import { AppRoutes } from './shared/app-routes.enum';
 import Loading from './shared/loading/loading';
@@ -65,6 +67,8 @@ const App = () => {
               />
               <Stack.Screen name={AppRoutes.Bookmarks} component={Bookmarks} />
               <Stack.Screen name={AppRoutes.Search} component={Search} />
+              <Stack.Screen name={AppRoutes.Result} component={PoemResult} />
+              <Stack.Screen name={AppRoutes.Bookmark} component={Bookmark} />
             </Stack.Navigator>
           </NavigationContainer>
         </StoreProvider>

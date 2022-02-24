@@ -1,9 +1,16 @@
 import { Poem } from '@nx-expo-poetry/models';
 import {
+  mapPoemResponseToPoem,
+  PoemResponse,
+  poetryService,
+} from '@nx-expo-poetry/services';
+import {
+  createAsyncThunk,
   createEntityAdapter,
   createSelector,
   createSlice,
   EntityState,
+  PayloadAction,
 } from '@reduxjs/toolkit';
 
 import { RootState } from '../root/root-state.interface';
@@ -17,9 +24,37 @@ export interface BookmarksEntity {
 }
 
 export interface BookmarksState extends EntityState<BookmarksEntity> {
+  poem?: Poem;
   loadingStatus: 'not loaded' | 'loading' | 'loaded' | 'error';
   error?: string;
 }
+
+export const fetchBookmark = createAsyncThunk<
+  Poem,
+  { title: string; author: string }
+>('bookmarks/fetchStatus', async ({ title, author }, { rejectWithValue }) => {
+  try {
+    const poemResponses: PoemResponse[] = await poetryService.getPoemsWithTitle(
+      title,
+      true
+    );
+    if (!poemResponses.length) {
+      return rejectWithValue({ error: 'not found' });
+    }
+    if (poemResponses.length > 1) {
+      const poemResponse = poemResponses.find(
+        (poemResponse) => poemResponse.author === author
+      );
+      if (!poemResponse) {
+        return rejectWithValue({ error: 'not found' });
+      }
+      return mapPoemResponseToPoem(poemResponse);
+    }
+    return mapPoemResponseToPoem(poemResponses[0]);
+  } catch (error) {
+    return rejectWithValue({ error });
+  }
+});
 
 export const bookmarksAdapter = createEntityAdapter<BookmarksEntity>();
 
@@ -35,6 +70,23 @@ export const bookmarksSlice = createSlice({
   reducers: {
     add: bookmarksAdapter.addOne,
     remove: bookmarksAdapter.removeOne,
+  },
+  extraReducers: (builder) => {
+    builder
+      .addCase(fetchBookmark.pending, (state: BookmarksState) => {
+        state.loadingStatus = 'loading';
+      })
+      .addCase(
+        fetchBookmark.fulfilled,
+        (state: BookmarksState, action: PayloadAction<Poem>) => {
+          state.poem = action.payload;
+          state.loadingStatus = 'loaded';
+        }
+      )
+      .addCase(fetchBookmark.rejected, (state: BookmarksState, action) => {
+        state.loadingStatus = 'error';
+        state.error = action.error.message;
+      });
   },
 });
 
@@ -57,7 +109,13 @@ const selectBookmarksEntities = createSelector(
   selectEntities
 );
 
+const getBookmarkPoem = createSelector(
+  getBookmarksState,
+  (bookmarksState: BookmarksState) => bookmarksState.poem
+);
+
 export const bookmarksSelectors = {
   selectAllBookmarks,
   selectBookmarksEntities,
+  getBookmarkPoem,
 };

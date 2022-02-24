@@ -6,8 +6,10 @@ import {
 } from '@nx-expo-poetry/services';
 import {
   createAsyncThunk,
+  createEntityAdapter,
   createSelector,
   createSlice,
+  EntityState,
   PayloadAction,
 } from '@reduxjs/toolkit';
 
@@ -15,9 +17,13 @@ import { RootState } from '../root/root-state.interface';
 
 export const SEARCH_FEATURE_KEY = 'search';
 
-export interface SearchState {
-  loadingStatus: LoadingStatus;
-  poems: Poem[];
+export interface SearchEntity {
+  id: string;
+  poem: Poem;
+}
+
+export interface SearchState extends EntityState<SearchEntity> {
+  loadingStatus: 'not loaded' | 'loading' | 'loaded' | 'error';
   error?: string;
 }
 
@@ -39,11 +45,12 @@ export const fetchSearch = createAsyncThunk<
   }
 });
 
-export const initialSearchState: SearchState = {
-  poems: [],
+export const searchAdapter = createEntityAdapter<SearchEntity>();
+
+export const initialSearchState: SearchState = searchAdapter.getInitialState({
   loadingStatus: 'not loaded',
   error: undefined,
-};
+});
 
 export const searchSlice = createSlice({
   name: SEARCH_FEATURE_KEY,
@@ -57,7 +64,13 @@ export const searchSlice = createSlice({
       .addCase(
         fetchSearch.fulfilled,
         (state: SearchState, action: PayloadAction<Poem[]>) => {
-          state.poems = action.payload;
+          searchAdapter.setAll(
+            state,
+            action.payload.map((poem) => ({
+              id: encodeURIComponent(poem.title),
+              poem,
+            }))
+          );
           state.loadingStatus = 'loaded';
         }
       )
@@ -71,17 +84,35 @@ export const searchSlice = createSlice({
 export const searchReducer = searchSlice.reducer;
 export const searchActions = searchSlice.actions;
 
+const { selectAll, selectEntities, selectById } = searchAdapter.getSelectors();
+
 const getSearchState = (rootState: RootState): SearchState =>
   rootState[SEARCH_FEATURE_KEY];
 
-const getPoems = createSelector(
+export const selectAllSearchResults = createSelector(getSearchState, selectAll);
+
+export const selectSearchEntities = createSelector(
   getSearchState,
-  (searchState) => searchState.poems
+  selectEntities
 );
+
+export const selectSearchResultById = (id: string) =>
+  createSelector(
+    getSearchState,
+    (searchState: SearchState): SearchEntity | undefined => {
+      return selectById(searchState, id);
+    }
+  );
 
 const getLoadingStatus = createSelector(
   getSearchState,
-  (searchState) => searchState.loadingStatus
+  (searchState): LoadingStatus => searchState.loadingStatus
 );
 
-export const searchSelectors = { getSearchState, getPoems, getLoadingStatus };
+export const searchSelectors = {
+  getSearchState,
+  selectAllSearchResults,
+  selectSearchEntities,
+  selectSearchResultById,
+  getLoadingStatus,
+};

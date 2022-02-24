@@ -1,13 +1,9 @@
-import {
-  RootState,
-  searchSelectors,
-  fetchSearch,
-} from '@nx-expo-poetry/store';
+import { RootState, searchSelectors, fetchSearch } from '@nx-expo-poetry/store';
 import { AnyAction, ThunkDispatch } from '@reduxjs/toolkit';
 
 const mapStateToProps = (state: RootState) => {
   return {
-    poems: searchSelectors.getPoems(state),
+    searchEntities: searchSelectors.selectAllSearchResults(state),
     loadingStatus: searchSelectors.getLoadingStatus(state),
   };
 };

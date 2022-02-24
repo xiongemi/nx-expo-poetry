@@ -1,11 +1,14 @@
-import { RouteProp, useRoute } from '@react-navigation/native';
+import { RouteProp, useNavigation, useRoute } from '@react-navigation/native';
 import React, { useEffect } from 'react';
 import { SafeAreaView, ScrollView } from 'react-native';
-import { Headline, Searchbar } from 'react-native-paper';
+import { Avatar, Headline, Searchbar } from 'react-native-paper';
 import { connect } from 'react-redux';
+import { AppRoutes } from '../shared/app-routes.enum';
+
 import Centre from '../shared/centre/centre';
 import PoemListItem from '../shared/poem-list-item/poem-list-item';
 import ShowLoading from '../shared/show-loading/show-loading';
+import Spacing from '../shared/spacing/spacing';
 
 import {
   mapDispatchToProps,
@@ -13,7 +16,12 @@ import {
   SearchProps,
 } from './search.props';
 
-export function Search({ poems, loadingStatus, fetchSearch }: SearchProps) {
+export function Search({
+  searchEntities,
+  loadingStatus,
+  fetchSearch,
+}: SearchProps) {
+  const navigation = useNavigation();
   const route = useRoute<RouteProp<{ params: { search: string } }>>();
   const searchParam = route.params?.search;
   const [searchQuery, setSearchQuery] = React.useState('');
@@ -36,7 +44,7 @@ export function Search({ poems, loadingStatus, fetchSearch }: SearchProps) {
     <SafeAreaView>
       <ScrollView contentInsetAdjustmentBehavior="automatic">
         <Searchbar
-          placeholder="Search any poem or author"
+          placeholder="Search any poem title or author"
           onChangeText={onSearchQueryChange}
           value={searchQuery}
           children={undefined}
@@ -48,19 +56,32 @@ export function Search({ poems, loadingStatus, fetchSearch }: SearchProps) {
           reload={() => onSearchQueryChange(searchQuery)}
         >
           {searchQuery && searchQuery.length > 3 ? (
-            poems && poems.length ? (
-              poems.map((poem, index) => (
+            searchEntities && searchEntities.length ? (
+              searchEntities.map((searchEntity) => (
                 <PoemListItem
-                  key={index + encodeURIComponent(poem.title)}
-                  poem={poem}
+                  key={searchEntity.id}
+                  poem={searchEntity.poem}
+                  onPress={() =>
+                    navigation.navigate(AppRoutes.Result, {
+                      id: searchEntity.id,
+                    })
+                  }
                 />
               ))
             ) : (
               <Centre>
+                <Spacing>
+                  <Avatar.Icon
+                    size={40}
+                    icon="alert-circle"
+                    children={undefined}
+                  />
+                </Spacing>
                 <Headline>Nothing found~</Headline>
               </Centre>
             )
           ) : (
+            // eslint-disable-next-line react/jsx-no-useless-fragment
             <></>
           )}
         </ShowLoading>

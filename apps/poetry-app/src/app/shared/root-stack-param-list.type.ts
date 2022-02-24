@@ -4,6 +4,12 @@ export type RootStackParamList = {
   [AppRoutes.Search]: { search?: string };
   [AppRoutes.Bookmarks]: undefined;
   [AppRoutes.PoemOfTheDay]: undefined;
+  [AppRoutes.Result]: { id: string };
+  [AppRoutes.Bookmark]: {
+    formattedDate: string;
+    title: string;
+    author: string;
+  };
 };
 
 declare global {

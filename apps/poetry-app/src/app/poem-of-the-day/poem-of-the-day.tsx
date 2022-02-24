@@ -26,14 +26,17 @@ export function PoemOfTheDay({
     fetchPoemOfTheDay();
   }, [fetchPoemOfTheDay]);
 
+  const goToSearch = (searchQuery: string) =>
+    navigation.navigate(AppRoutes.Search, { search: searchQuery });
+
   return (
     <PoemCard
-      fetchPoemOfTheDay={fetchPoemOfTheDay}
+      fetch={fetchPoemOfTheDay}
       loadingStatus={loadingStatus}
       formattedDate={formattedDate}
       poem={poem}
       bookmark={bookmark}
-      goToSearch={() => navigation.navigate(AppRoutes.Search, {search: ''})}
+      goToSearch={goToSearch}
     />
   );
 }

@@ -1,16 +1,15 @@
 import { Poem } from '@nx-expo-poetry/models';
 import {
-  RootState,
-  poemOfTheDaySelelctors,
-  fetchPoemOfTheDay,
   bookmarksActions,
+  bookmarksSelectors,
+  fetchBookmark,
+  RootState,
 } from '@nx-expo-poetry/store';
 import { AnyAction, ThunkDispatch } from '@reduxjs/toolkit';
 
 const mapStateToProps = (state: RootState) => {
   return {
-    poem: poemOfTheDaySelelctors.getPoemOfTheDay(state),
-    loadingStatus: poemOfTheDaySelelctors.getPoemOfTheDayLoadingStatus(state),
+    poem: bookmarksSelectors.getBookmarkPoem(state),
   };
 };
 
@@ -18,8 +17,8 @@ const mapDispatchToProps = (
   dispatch: ThunkDispatch<RootState, void, AnyAction>
 ) => {
   return {
-    fetchPoemOfTheDay() {
-      dispatch(fetchPoemOfTheDay());
+    fetchBookmark(title: string, author: string) {
+      dispatch(fetchBookmark({ title, author }));
     },
     bookmark(formattedDate: string, poem: Poem) {
       dispatch(
@@ -39,7 +38,7 @@ const mapDispatchToProps = (
 type mapStateToPropsType = ReturnType<typeof mapStateToProps>;
 type mapDispatchToPropsType = ReturnType<typeof mapDispatchToProps>;
 
-type PoemOfTheDayProps = mapStateToPropsType & mapDispatchToPropsType;
+type BookmarkProps = mapStateToPropsType & mapDispatchToPropsType;
 
 export { mapStateToProps, mapDispatchToProps };
-export type { PoemOfTheDayProps };
+export type { BookmarkProps };
