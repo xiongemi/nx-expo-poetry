@@ -3,8 +3,8 @@ import React, { useEffect } from 'react';
 import { SafeAreaView, ScrollView } from 'react-native';
 import { Avatar, Headline, Searchbar } from 'react-native-paper';
 import { connect } from 'react-redux';
-import { AppRoutes } from '../shared/app-routes.enum';
 
+import { AppRoutes } from '../shared/app-routes.enum';
 import Centre from '../shared/centre/centre';
 import PoemListItem from '../shared/poem-list-item/poem-list-item';
 import ShowLoading from '../shared/show-loading/show-loading';

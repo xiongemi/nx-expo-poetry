@@ -26,7 +26,8 @@
       "package": "com.exiong.poetryapp"
     },
     "web": {
-      "favicon": "./assets/favicon.png"
+      "favicon": "./assets/favicon.png",
+      "publicPath": "nx-expo-poetry"
     }
   }
 }

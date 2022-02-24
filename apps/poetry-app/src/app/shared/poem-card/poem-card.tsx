@@ -9,8 +9,8 @@ import {
   Button,
   Snackbar,
 } from 'react-native-paper';
-import { AppRoutes } from '../app-routes.enum';
 
+import { AppRoutes } from '../app-routes.enum';
 import Centre from '../centre/centre';
 import FullHeight from '../full-height/full-height';
 import ShowLoading from '../show-loading/show-loading';

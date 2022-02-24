@@ -2,6 +2,7 @@
   "name": "poetry-app",
   "version": "0.0.1",
   "private": true,
+  "homepage": "https://xiongemi.github.io/nx-expo-poetry/",
   "dependencies": {
     "@expo/metro-config": "*",
     "@nrwl/expo": "*",
