@@ -51,5 +51,7 @@ npm-debug.*
 *.orig.*
 web-build/
 
-
 apps/peotry-e2e/artifacts
+
+# key
+keys/

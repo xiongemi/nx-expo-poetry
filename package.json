@@ -3,6 +3,7 @@
   "version": "0.0.0",
   "private": true,
   "license": "MIT",
+  "homepage": "https://xiongemi.github.io/nx-expo-poetry/",
   "scripts": {
     "build": "nx build",
     "predeploy": "nx build-web poetry-app",
