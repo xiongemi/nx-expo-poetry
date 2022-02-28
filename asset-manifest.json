@@ -1,11 +1,11 @@
 {
   "files": {
-    "app.js": "/nx-expo-poetry/static/js/app.aa2059a7.chunk.js",
-    "app.js.map": "/nx-expo-poetry/static/js/app.aa2059a7.chunk.js.map",
+    "app.js": "/nx-expo-poetry/static/js/app.09f0eb70.chunk.js",
+    "app.js.map": "/nx-expo-poetry/static/js/app.09f0eb70.chunk.js.map",
     "runtime~app.js": "/nx-expo-poetry/static/js/runtime~app.74b91c38.js",
     "runtime~app.js.map": "/nx-expo-poetry/static/js/runtime~app.74b91c38.js.map",
-    "static/js/2.60e00974.chunk.js": "/nx-expo-poetry/static/js/2.60e00974.chunk.js",
-    "static/js/2.60e00974.chunk.js.map": "/nx-expo-poetry/static/js/2.60e00974.chunk.js.map",
+    "static/js/2.8550e0b7.chunk.js": "/nx-expo-poetry/static/js/2.8550e0b7.chunk.js",
+    "static/js/2.8550e0b7.chunk.js.map": "/nx-expo-poetry/static/js/2.8550e0b7.chunk.js.map",
     "fonts/MaterialCommunityIcons.ttf": "/nx-expo-poetry/./fonts/MaterialCommunityIcons.ttf",
     "favicon-16.png": "/nx-expo-poetry/favicon-16.png",
     "favicon-32.png": "/nx-expo-poetry/favicon-32.png",
@@ -13,11 +13,11 @@
     "index.html": "/nx-expo-poetry/index.html",
     "manifest.json": "/nx-expo-poetry/manifest.json",
     "serve.json": "/nx-expo-poetry/serve.json",
-    "static/js/2.60e00974.chunk.js.LICENSE.txt": "/nx-expo-poetry/static/js/2.60e00974.chunk.js.LICENSE.txt"
+    "static/js/2.8550e0b7.chunk.js.LICENSE.txt": "/nx-expo-poetry/static/js/2.8550e0b7.chunk.js.LICENSE.txt"
   },
   "entrypoints": [
     "static/js/runtime~app.74b91c38.js",
-    "static/js/2.60e00974.chunk.js",
-    "static/js/app.aa2059a7.chunk.js"
+    "static/js/2.8550e0b7.chunk.js",
+    "static/js/app.09f0eb70.chunk.js"
   ]
 }
