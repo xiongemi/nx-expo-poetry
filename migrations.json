@@ -1,0 +1,12 @@
+{
+  "migrations": [
+    {
+      "version": "13.8.2-beta.0",
+      "cli": "nx",
+      "description": "remove deprecated @types/detox from package.json",
+      "factory": "./src/migrations/update-13-8-2/remove-types-detox-13-8-2",
+      "package": "@nrwl/detox",
+      "name": "remove-types-detox-13-8-2"
+    }
+  ]
+}
