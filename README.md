@@ -4,6 +4,8 @@
 
 <p style="text-align: center;"><img src="https://github.com/xiongemi/nx-expo-poetry/blob/main/images/AppIcons/appstore.png?raw=true" width="450"></p>
 
+A mobile app generated using [@nrwl/expo](https://www.npmjs.com/package/@nrwl/expo).
+
 Mobile:
 ![screenshot](https://github.com/xiongemi/nx-expo-poetry/blob/main/images/screenshot.png?raw=true)
 
