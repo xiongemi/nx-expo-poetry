@@ -1,8 +1,8 @@
 {
   "expo": {
-    "name": "poetry-app",
+    "name": "Poem of the Day",
     "slug": "poetry-app",
-    "version": "1.0.1",
+    "version": "1.0.3",
     "orientation": "portrait",
     "icon": "./assets/icon.png",
     "splash": {

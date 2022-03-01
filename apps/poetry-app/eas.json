@@ -6,10 +6,8 @@
       }
     },
     "development": {
-      "android": {
-        "developmentClient": true,
-        "distribution": "internal"
-      }
+      "developmentClient": true,
+      "distribution": "internal"
     }
   },
   "cli": {
