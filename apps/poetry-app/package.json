@@ -33,7 +33,8 @@
     "@react-navigation/native": "*",
     "@react-navigation/native-stack": "*",
     "react-redux": "*",
-    "date-fns": "*"
+    "date-fns": "*",
+    "react-native-vector-icons": "*"
   },
   "scripts": {
     "eas-build-pre-install": "cd ../../ && npm install && cp package-lock.json ./apps/poetry-app/ && mv ./apps/poetry-app/eas.js ./index.js"
