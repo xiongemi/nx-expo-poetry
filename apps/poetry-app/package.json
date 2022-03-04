@@ -3,17 +3,27 @@
   "version": "0.0.1",
   "private": true,
   "homepage": "https://xiongemi.github.io/nx-expo-poetry/",
+  "scripts": {
+    "eas-build-pre-install": "cd ../../ && npm install && cp package-lock.json ./apps/poetry-app/ && mv ./apps/poetry-app/eas.js ./index.js"
+  },
   "dependencies": {
     "@expo/metro-config": "*",
     "@nrwl/expo": "*",
+    "@react-native-async-storage/async-storage": "*",
+    "@react-navigation/native": "*",
+    "@react-navigation/native-stack": "*",
+    "@reduxjs/toolkit": "*",
     "@testing-library/jest-native": "*",
     "@testing-library/react-native": "*",
+    "connected-react-router": "*",
+    "date-fns": "*",
     "expo": "*",
     "expo-dev-client": "*",
     "expo-splash-screen": "*",
     "expo-status-bar": "*",
     "expo-structured-headers": "*",
     "expo-updates": "*",
+    "history": "*",
     "react": "*",
     "react-native": "*",
     "react-native-gesture-handler": "*",
@@ -22,21 +32,11 @@
     "react-native-safe-area-context": "*",
     "react-native-screens": "*",
     "react-native-svg": "*",
+    "react-native-vector-icons": "*",
     "react-native-web": "*",
-    "@react-native-async-storage/async-storage": "*",
-    "string-similarity": "*",
-    "@reduxjs/toolkit": "*",
-    "redux-persist": "*",
-    "connected-react-router": "*",
-    "history": "*",
-    "redux-logger": "*",
-    "@react-navigation/native": "*",
-    "@react-navigation/native-stack": "*",
     "react-redux": "*",
-    "date-fns": "*",
-    "react-native-vector-icons": "*"
-  },
-  "scripts": {
-    "eas-build-pre-install": "cd ../../ && npm install && cp package-lock.json ./apps/poetry-app/ && mv ./apps/poetry-app/eas.js ./index.js"
+    "redux-logger": "*",
+    "redux-persist": "*",
+    "string-similarity": "*"
   }
 }

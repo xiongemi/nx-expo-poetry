@@ -1,5 +1,3 @@
-
-
 # NxExpoPoetry
 
 <p style="text-align: center;"><img src="https://github.com/xiongemi/nx-expo-poetry/blob/main/images/AppIcons/appstore.png?raw=true" width="450"></p>
@@ -8,6 +6,14 @@ A mobile app generated using [@nrwl/expo](https://www.npmjs.com/package/@nrwl/ex
 
 Mobile:
 ![screenshot](https://github.com/xiongemi/nx-expo-poetry/blob/main/images/screenshot.png?raw=true)
+
+API: https://github.com/thundercomb/poetrydb
+
+## Commands
+- deploy to github page: `npm run deploy`
+- run the web app: `nx web poetry-app`
+- build the web app: `nx build-web poetry-app`
+- start expo server: `nx start poetry-app` or `npm run start`
 
 This project was generated using [Nx](https://nx.dev).
 
