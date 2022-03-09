@@ -2,8 +2,8 @@
   "background_color": "#ffffff",
   "display": "standalone",
   "lang": "en",
-  "name": "poetry-app",
-  "short_name": "poetry-app",
+  "name": "Poem of the Day",
+  "short_name": "Poem of the Day",
   "start_url": "/?utm_source=web_app_manifest",
   "orientation": "portrait",
   "related_applications": [
