@@ -39,7 +39,6 @@
     "react-redux": "*",
     "redux-logger": "*",
     "redux-persist": "*",
-    "string-similarity": "*",
-    "@expo/vector-icons": "*"
+    "string-similarity": "*"
   }
 }
