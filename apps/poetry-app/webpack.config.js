@@ -8,7 +8,6 @@ module.exports = async function (env, argv) {
   if (rules) {
     rules.push({
       test: /\.(mjs|[jt]sx?)$/,
-      exclude: /node_modules[/\\](?!react-native-vector-icons)/,
       use: {
         loader: require.resolve('@nrwl/web/src/utils/web-babel-loader.js'),
         options: {

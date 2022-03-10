@@ -4,7 +4,10 @@
   "private": true,
   "homepage": "https://xiongemi.github.io/nx-expo-poetry/",
   "scripts": {
-    "eas-build-pre-install": "cd ../../ && npm install && cp package-lock.json ./apps/poetry-app/ && mv ./apps/poetry-app/eas.js ./index.js"
+    "eas-build-pre-install": "cd ../../ && npm install && cp package-lock.json ./apps/poetry-app/ && mv ./apps/poetry-app/eas.js ./index.js",
+    "eas-build-post-install": "cd ../../ && nx sync-deps poetry-app && nx ensure-symlink poetry-app",
+    "eas-android": "EAS_LOCAL_BUILD_SKIP_CLEANUP=1 EAS_LOCAL_BUILD_WORKINGDIR=/Users/emilyxiong/Code/tmp/eas-expo-poetry-android eas build --platform android  --profile preview --local",
+    "eas-ios": "EAS_LOCAL_BUILD_SKIP_CLEANUP=1 EAS_LOCAL_BUILD_WORKINGDIR=/Users/emilyxiong/Code/tmp/eas-expo-poetry-ios eas build --platform ios  --profile preview --local"
   },
   "dependencies": {
     "@expo/metro-config": "*",
@@ -32,11 +35,11 @@
     "react-native-safe-area-context": "*",
     "react-native-screens": "*",
     "react-native-svg": "*",
-    "react-native-vector-icons": "*",
     "react-native-web": "*",
     "react-redux": "*",
     "redux-logger": "*",
     "redux-persist": "*",
-    "string-similarity": "*"
+    "string-similarity": "*",
+    "@expo/vector-icons": "*"
   }
 }

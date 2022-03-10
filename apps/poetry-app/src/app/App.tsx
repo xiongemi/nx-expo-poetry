@@ -1,3 +1,4 @@
+import { Ionicons } from '@expo/vector-icons';
 import {
   BOOKMARKS_FEATURE_KEY,
   createRootStore,
@@ -48,7 +49,12 @@ const App = () => {
   const Stack = createNativeStackNavigator<RootStackParamList>();
 
   return (
-    <PaperProvider theme={theme}>
+    <PaperProvider
+      theme={theme}
+      settings={{
+        icon: (props: any) => <Ionicons {...props} />,
+      }}
+    >
       <PersistGate loading={<Loading />} persistor={persistor}>
         <StoreProvider store={store}>
           <NavigationContainer>
@@ -59,7 +65,7 @@ const App = () => {
                 options={({ navigation }) => ({
                   headerRight: () => (
                     <IconButton
-                      icon="bookmark"
+                      icon="book"
                       onPress={() => navigation.navigate(AppRoutes.Bookmarks)}
                     />
                   ),

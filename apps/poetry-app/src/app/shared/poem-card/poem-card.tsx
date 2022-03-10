@@ -60,16 +60,19 @@ export function PoemCard({
               />
               <Card.Cover source={{ uri: `https://picsum.photos/300/200` }} />
               <Card.Actions>
-                <Button icon="heart-plus" onPress={onBookmarkPoem}>
+                <Button icon="heart-outline" onPress={onBookmarkPoem}>
                   Bookmark
                 </Button>
                 {fetch && (
-                  <Button icon="skip-next" onPress={() => fetch()}>
+                  <Button
+                    icon="play-skip-forward-outline"
+                    onPress={() => fetch()}
+                  >
                     Next
                   </Button>
                 )}
                 {goToSearch && (
-                  <Button icon="magnify" onPress={() => goToSearch('')}>
+                  <Button icon="search" onPress={() => goToSearch('')}>
                     Search
                   </Button>
                 )}

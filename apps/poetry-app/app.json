@@ -2,7 +2,7 @@
   "expo": {
     "name": "Poem of the Day",
     "slug": "poetry-app",
-    "version": "1.0.4",
+    "version": "1.0.5",
     "orientation": "portrait",
     "icon": "./assets/icon.png",
     "splash": {
@@ -24,7 +24,7 @@
         "backgroundColor": "#FFFFFF"
       },
       "package": "com.exiong.poetryapp",
-      "versionCode": 2
+      "versionCode": 4
     },
     "web": {
       "favicon": "./assets/favicon.png",

@@ -49,6 +49,8 @@ export function Search({
           value={searchQuery}
           children={undefined}
           autoComplete={undefined}
+          icon="search"
+          clearIcon="close"
         />
         <ShowLoading
           showLoading={loadingStatus === 'loading'}
@@ -71,11 +73,7 @@ export function Search({
             ) : (
               <Centre>
                 <Spacing>
-                  <Avatar.Icon
-                    size={40}
-                    icon="alert-circle"
-                    children={undefined}
-                  />
+                  <Avatar.Icon size={40} icon="alert" children={undefined} />
                 </Spacing>
                 <Headline>Nothing found~</Headline>
               </Centre>

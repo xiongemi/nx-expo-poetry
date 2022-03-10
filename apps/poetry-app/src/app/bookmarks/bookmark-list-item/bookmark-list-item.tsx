@@ -24,7 +24,7 @@ export function BookmarkListItem({
       right={() => (
         <IconButton
           size={30}
-          icon="minus-circle"
+          icon="remove-circle"
           color={Colors.red500}
           onPress={() => removeBookmark(bookmark)}
         />

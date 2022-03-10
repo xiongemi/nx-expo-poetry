@@ -23,7 +23,7 @@ export function ShowLoading({
   ) : hasError ? (
     <Centre>
       <Spacing>
-        <Avatar.Icon size={40} icon="alert-circle" children={undefined} />
+        <Avatar.Icon size={40} icon="alert" children={undefined} />
       </Spacing>
       <Headline>Oops~ Something went wrong</Headline>
       <Subheading>Make sure you got internet connection.</Subheading>

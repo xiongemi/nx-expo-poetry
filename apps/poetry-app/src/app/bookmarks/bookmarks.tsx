@@ -61,11 +61,7 @@ export function Bookmarks({
           ) : (
             <Centre>
               <Spacing>
-                <Avatar.Icon
-                  size={40}
-                  icon="book-multiple"
-                  children={undefined}
-                />
+                <Avatar.Icon size={40} icon="book" children={undefined} />
               </Spacing>
               <Spacing>
                 <Headline>No poems bookmarked~</Headline>
