@@ -1,23 +1,34 @@
 {
   "files": {
-    "app.js": "/nx-expo-poetry/static/js/app.b4e3b8f6.chunk.js",
-    "app.js.map": "/nx-expo-poetry/static/js/app.b4e3b8f6.chunk.js.map",
+    "app.js": "/nx-expo-poetry/static/js/app.e9e3c5c6.chunk.js",
+    "app.js.map": "/nx-expo-poetry/static/js/app.e9e3c5c6.chunk.js.map",
     "runtime~app.js": "/nx-expo-poetry/static/js/runtime~app.74b91c38.js",
     "runtime~app.js.map": "/nx-expo-poetry/static/js/runtime~app.74b91c38.js.map",
-    "static/js/2.3a7b6555.chunk.js": "/nx-expo-poetry/static/js/2.3a7b6555.chunk.js",
-    "static/js/2.3a7b6555.chunk.js.map": "/nx-expo-poetry/static/js/2.3a7b6555.chunk.js.map",
+    "static/js/2.d8c90072.chunk.js": "/nx-expo-poetry/static/js/2.d8c90072.chunk.js",
+    "static/js/2.d8c90072.chunk.js.map": "/nx-expo-poetry/static/js/2.d8c90072.chunk.js.map",
+    "fonts/AntDesign.ttf": "/nx-expo-poetry/./fonts/AntDesign.ttf",
+    "fonts/Entypo.ttf": "/nx-expo-poetry/./fonts/Entypo.ttf",
+    "fonts/Feather.ttf": "/nx-expo-poetry/./fonts/Feather.ttf",
+    "fonts/FontAwesome.ttf": "/nx-expo-poetry/./fonts/FontAwesome.ttf",
+    "fonts/FontAwesome5_Brands.ttf": "/nx-expo-poetry/./fonts/FontAwesome5_Brands.ttf",
+    "fonts/FontAwesome5_Solid.ttf": "/nx-expo-poetry/./fonts/FontAwesome5_Solid.ttf",
+    "fonts/Fontisto.ttf": "/nx-expo-poetry/./fonts/Fontisto.ttf",
+    "fonts/Foundation.ttf": "/nx-expo-poetry/./fonts/Foundation.ttf",
+    "fonts/Ionicons.ttf": "/nx-expo-poetry/./fonts/Ionicons.ttf",
     "fonts/MaterialCommunityIcons.ttf": "/nx-expo-poetry/./fonts/MaterialCommunityIcons.ttf",
+    "fonts/MaterialIcons.ttf": "/nx-expo-poetry/./fonts/MaterialIcons.ttf",
+    "fonts/SimpleLineIcons.ttf": "/nx-expo-poetry/./fonts/SimpleLineIcons.ttf",
     "favicon-16.png": "/nx-expo-poetry/favicon-16.png",
     "favicon-32.png": "/nx-expo-poetry/favicon-32.png",
     "favicon.ico": "/nx-expo-poetry/favicon.ico",
     "index.html": "/nx-expo-poetry/index.html",
     "manifest.json": "/nx-expo-poetry/manifest.json",
     "serve.json": "/nx-expo-poetry/serve.json",
-    "static/js/2.3a7b6555.chunk.js.LICENSE.txt": "/nx-expo-poetry/static/js/2.3a7b6555.chunk.js.LICENSE.txt"
+    "static/js/2.d8c90072.chunk.js.LICENSE.txt": "/nx-expo-poetry/static/js/2.d8c90072.chunk.js.LICENSE.txt"
   },
   "entrypoints": [
     "static/js/runtime~app.74b91c38.js",
-    "static/js/2.3a7b6555.chunk.js",
-    "static/js/app.b4e3b8f6.chunk.js"
+    "static/js/2.d8c90072.chunk.js",
+    "static/js/app.e9e3c5c6.chunk.js"
   ]
 }
