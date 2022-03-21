@@ -14,7 +14,15 @@ export function PoemListItem({ poem, onPress }: PoemListItemProps) {
         <List.Item
           title={poem.title}
           descriptionNumberOfLines={3}
-          description={poem.author + '\n' + poem.lines?.[0]}
+          description={
+            poem.author +
+            '\n' +
+            poem.lines?.[0] +
+            ' ' +
+            poem.lines?.[1] +
+            ' ...'
+          }
+          descriptionEllipsizeMode="tail"
           onPress={onPress}
         />
         <Divider />

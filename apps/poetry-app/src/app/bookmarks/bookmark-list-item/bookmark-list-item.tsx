@@ -18,8 +18,12 @@ export function BookmarkListItem({
       title={bookmark.poem.title}
       descriptionNumberOfLines={3}
       description={
-        bookmark.formattedDate + '\n' + bookmark.poem.lines[0] + '...'
+        bookmark.formattedDate +
+        '\n' +
+        bookmark.poem.lines[0] +
+        '...'
       }
+      descriptionEllipsizeMode="tail"
       onPress={onPress}
       right={() => (
         <IconButton

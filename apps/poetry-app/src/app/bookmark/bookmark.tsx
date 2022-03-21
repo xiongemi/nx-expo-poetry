@@ -1,7 +1,6 @@
-import { Poem } from '@nx-expo-poetry/models';
 import { RouteProp, useNavigation, useRoute } from '@react-navigation/native';
 import { format } from 'date-fns';
-import React, { useEffect, useState } from 'react';
+import React, { useEffect } from 'react';
 import { connect } from 'react-redux';
 
 import { AppRoutes } from '../shared/app-routes.enum';

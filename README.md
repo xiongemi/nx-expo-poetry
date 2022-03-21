@@ -9,7 +9,15 @@ Mobile:
 
 API: https://github.com/thundercomb/poetrydb
 
+## How to use it with EAS
+
+To set this repository up, you need an Expo account with access to EAS. After that, you need to run these commands.
+
+1. run `npm install` to install all dependencies
+2. in `apps/poetry-app/app.json`, change the `expo.owner` and `expo.android.package` / `expo.ios.bundleIdentifier` properties in app.json for all apps.
+
 ## Commands
+
 - deploy to github page: `npm run deploy`
 - run the web app: `nx web poetry-app`
 - build the web app: `nx build-web poetry-app`
@@ -91,8 +99,6 @@ Run `nx graph` to see a diagram of the dependencies of your projects.
 ## Further help
 
 Visit the [Nx Documentation](https://nx.dev) to learn more.
-
-
 
 ## ☁ Nx Cloud
 

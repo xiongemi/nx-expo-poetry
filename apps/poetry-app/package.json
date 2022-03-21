@@ -4,10 +4,10 @@
   "private": true,
   "homepage": "https://xiongemi.github.io/nx-expo-poetry/",
   "scripts": {
-    "eas-build-pre-install": "cd ../../ && npm install && cp package-lock.json ./apps/poetry-app/ && mv ./apps/poetry-app/eas.js ./index.js && nx sync-deps poetry-app && nx ensure-symlink poetry-app",
-    "eas-build-post-install": "cd ../../ && nx sync-deps poetry-app && nx ensure-symlink poetry-app",
     "eas-android": "EAS_LOCAL_BUILD_SKIP_CLEANUP=1 EAS_LOCAL_BUILD_WORKINGDIR=/Users/emilyxiong/Code/tmp/eas-expo-poetry-android eas build --platform android  --profile preview --local",
-    "eas-ios": "EAS_LOCAL_BUILD_SKIP_CLEANUP=1 EAS_LOCAL_BUILD_WORKINGDIR=/Users/emilyxiong/Code/tmp/eas-expo-poetry-ios eas build --platform ios  --profile preview --local"
+    "eas-build-pre-install": "cd ../../ && cp package-lock.json ./apps/poetry-app/ && npm install && mv ./apps/poetry-app/eas.js ./index.js",
+    "eas-ios": "EAS_LOCAL_BUILD_SKIP_CLEANUP=1 EAS_LOCAL_BUILD_WORKINGDIR=/Users/emilyxiong/Code/tmp/eas-expo-poetry-ios eas build --platform ios  --profile preview --local",
+    "postinstall": "rm -r node_modules && cd ../../ && npm install && npx nx sync-deps poetry-app && npx nx ensure-symlink poetry-app"
   },
   "dependencies": {
     "@expo/metro-config": "*",
