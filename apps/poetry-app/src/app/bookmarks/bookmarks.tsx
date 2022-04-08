@@ -1,14 +1,10 @@
 import { BookmarksEntity } from '@nx-expo-poetry/store';
+import { AppRoutes, Centre, FullHeight, Spacing } from '@nx-expo-poetry/ui';
 import { useNavigation } from '@react-navigation/native';
 import React, { useState } from 'react';
 import { SafeAreaView, ScrollView, View } from 'react-native';
 import { Avatar, Divider, Headline, Snackbar } from 'react-native-paper';
 import { connect } from 'react-redux';
-
-import { AppRoutes } from '../shared/app-routes.enum';
-import Centre from '../shared/centre/centre';
-import FullHeight from '../shared/full-height/full-height';
-import Spacing from '../shared/spacing/spacing';
 
 import BookmarkListItem from './bookmark-list-item/bookmark-list-item';
 import {

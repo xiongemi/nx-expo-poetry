@@ -1,3 +1,5 @@
+const path = require('path');
+
 const createExpoWebpackConfigAsync = require('@expo/webpack-config');
 const { TsconfigPathsPlugin } = require('tsconfig-paths-webpack-plugin');
 
@@ -34,5 +36,19 @@ module.exports = async function (env, argv) {
       extensions,
     })
   );
+
+  config.resolve.alias = {
+    ...config.resolve.alias,
+    react: path.resolve('../../node_modules/react'),
+    'react-dom': path.resolve('../../node_modules/react-dom'),
+    'react-native-web': path.resolve('../../node_modules/react-native-web'),
+    'react-native-reanimated': path.resolve(
+      '../../node_modules/react-native-reanimated'
+    ),
+    '@react-navigation/native': path.resolve(
+      '../../node_modules/@react-navigation/native'
+    ),
+  };
+  console.log(config.resolve.alias);
   return config;
 };

@@ -1,10 +1,8 @@
+import { AppRoutes, PoemCard } from '@nx-expo-poetry/ui';
 import { useNavigation } from '@react-navigation/native';
 import { format } from 'date-fns';
 import React, { useEffect } from 'react';
 import { connect } from 'react-redux';
-
-import { AppRoutes } from '../shared/app-routes.enum';
-import { PoemCard } from '../shared/poem-card/poem-card';
 
 import {
   mapDispatchToProps,

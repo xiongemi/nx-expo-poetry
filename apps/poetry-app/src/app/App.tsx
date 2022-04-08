@@ -4,6 +4,7 @@ import {
   createRootStore,
   transformEntityStateToPersist,
 } from '@nx-expo-poetry/store';
+import { Loading, AppRoutes, RootStackParamList } from '@nx-expo-poetry/ui';
 import AsyncStorage from '@react-native-async-storage/async-storage';
 import { NavigationContainer } from '@react-navigation/native';
 import { createNativeStackNavigator } from '@react-navigation/native-stack';
@@ -22,9 +23,6 @@ import Bookmarks from './bookmarks/bookmarks';
 import PoemOfTheDay from './poem-of-the-day/poem-of-the-day';
 import PoemResult from './poem-result/poem-result';
 import Search from './search/search';
-import { AppRoutes } from './shared/app-routes.enum';
-import Loading from './shared/loading/loading';
-import { RootStackParamList } from './shared/root-stack-param-list.type';
 
 const App = () => {
   const persistConfig = {
