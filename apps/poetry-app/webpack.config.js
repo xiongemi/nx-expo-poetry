@@ -41,7 +41,6 @@ module.exports = async function (env, argv) {
     ...config.resolve.alias,
     react: path.resolve('../../node_modules/react'),
     'react-dom': path.resolve('../../node_modules/react-dom'),
-    'react-native-web': path.resolve('../../node_modules/react-native-web'),
     'react-native-reanimated': path.resolve(
       '../../node_modules/react-native-reanimated'
     ),
@@ -49,6 +48,5 @@ module.exports = async function (env, argv) {
       '../../node_modules/@react-navigation/native'
     ),
   };
-  console.log(config.resolve.alias);
   return config;
 };

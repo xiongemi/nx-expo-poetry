@@ -18,6 +18,10 @@
         "jestConfig": "libs/ui/jest.config.js",
         "passWithNoTests": true
       }
+    },
+    "ensure-symlink": {
+      "executor": "@nrwl/expo:ensure-symlink",
+      "options": {}
     }
   }
 }
