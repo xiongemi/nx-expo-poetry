@@ -8,6 +8,7 @@ Mobile:
 ![screenshot](https://github.com/xiongemi/nx-expo-poetry/blob/main/images/screenshot.png?raw=true)
 
 API: https://github.com/thundercomb/poetrydb
+Blog: https://medium.com/nrwl/introducing-expo-support-for-nx-3fffb1849a6f
 
 ## How to use it with EAS
 

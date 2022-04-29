@@ -5,7 +5,7 @@
   "homepage": "https://xiongemi.github.io/nx-expo-poetry/",
   "scripts": {
     "eas-android": "EAS_LOCAL_BUILD_SKIP_CLEANUP=1 EAS_LOCAL_BUILD_WORKINGDIR=/Users/emilyxiong/Code/tmp/eas-expo-poetry-android eas build --platform android  --profile preview --local",
-    "eas-build-pre-install": "cd ../../ && cp package-lock.json ./apps/poetry-app/ && npm install && mv ./apps/poetry-app/eas.js ./index.js && npx nx sync-deps poetry-app",
+    "eas-build-pre-install": "cd ../../ && cp package-lock.json ./apps/poetry-app/ && npm install && npx nx sync-deps poetry-app",
     "eas-ios": "EAS_LOCAL_BUILD_SKIP_CLEANUP=1 EAS_LOCAL_BUILD_WORKINGDIR=/Users/emilyxiong/Code/tmp/eas-expo-poetry-ios eas build --platform ios  --profile preview --local",
     "postinstall": "rm -r node_modules && cd ../../ && npm install && npx nx ensure-symlink poetry-app"
   },
