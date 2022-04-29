@@ -81,7 +81,7 @@
       "executor": "@nrwl/jest:jest",
       "outputs": ["coverage/apps/poetry-app"],
       "options": {
-        "jestConfig": "apps/poetry-app/jest.config.js",
+        "jestConfig": "apps/poetry-app/jest.config.ts",
         "passWithNoTests": true
       }
     }
