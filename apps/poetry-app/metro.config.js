@@ -11,11 +11,14 @@ module.exports = (async () => {
     (ext) => ext !== 'svg'
   );
   defaultConfig.resolver.sourceExts.push('svg');
-  return withNxMetro(defaultConfig, {
+  const config = withNxMetro(defaultConfig, {
     // Change this to true to see debugging info.
     // Useful if you have issues resolving modules
     debug: false,
     // all the file extensions used for imports other than 'ts', 'tsx', 'js', 'jsx'
     extensions: [],
+    projectRoot: __dirname,
+    watchFolders: []
   });
+  return config;
 })();
