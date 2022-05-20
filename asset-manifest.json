@@ -1,38 +1,38 @@
 {
   "files": {
-    "app.js": "/nx-expo-poetry/static/js/app.a65a4558.chunk.js",
-    "app.js.map": "/nx-expo-poetry/static/js/app.a65a4558.chunk.js.map",
+    "app.js": "/nx-expo-poetry/static/js/app.1c45bda3.chunk.js",
+    "app.js.map": "/nx-expo-poetry/static/js/app.1c45bda3.chunk.js.map",
     "runtime~app.js": "/nx-expo-poetry/static/js/runtime~app.74b91c38.js",
     "runtime~app.js.map": "/nx-expo-poetry/static/js/runtime~app.74b91c38.js.map",
-    "static/js/2.6a3517d0.chunk.js": "/nx-expo-poetry/static/js/2.6a3517d0.chunk.js",
-    "static/js/2.6a3517d0.chunk.js.map": "/nx-expo-poetry/static/js/2.6a3517d0.chunk.js.map",
+    "static/js/2.51bcd3f7.chunk.js": "/nx-expo-poetry/static/js/2.51bcd3f7.chunk.js",
+    "static/js/2.51bcd3f7.chunk.js.map": "/nx-expo-poetry/static/js/2.51bcd3f7.chunk.js.map",
     "favicon-16.png": "/nx-expo-poetry/favicon-16.png",
     "favicon-32.png": "/nx-expo-poetry/favicon-32.png",
     "favicon.ico": "/nx-expo-poetry/favicon.ico",
     "index.html": "/nx-expo-poetry/index.html",
     "manifest.json": "/nx-expo-poetry/manifest.json",
     "serve.json": "/nx-expo-poetry/serve.json",
-    "static/js/2.6a3517d0.chunk.js.LICENSE.txt": "/nx-expo-poetry/static/js/2.6a3517d0.chunk.js.LICENSE.txt",
+    "static/js/2.51bcd3f7.chunk.js.LICENSE.txt": "/nx-expo-poetry/static/js/2.51bcd3f7.chunk.js.LICENSE.txt",
     "static/media/AntDesign.ttf": "/nx-expo-poetry/static/media/AntDesign.163adab9.ttf",
-    "static/media/Entypo.ttf": "/nx-expo-poetry/static/media/Entypo.a10f4124.ttf",
+    "static/media/Entypo.ttf": "/nx-expo-poetry/static/media/Entypo.fc616934.ttf",
     "static/media/EvilIcons.ttf": "/nx-expo-poetry/static/media/EvilIcons.699664b3.ttf",
-    "static/media/Feather.ttf": "/nx-expo-poetry/static/media/Feather.11cd1d79.ttf",
+    "static/media/Feather.ttf": "/nx-expo-poetry/static/media/Feather.0f5d9ced.ttf",
     "static/media/FontAwesome.ttf": "/nx-expo-poetry/static/media/FontAwesome.1e59d233.ttf",
-    "static/media/FontAwesome5_Brands.ttf": "/nx-expo-poetry/static/media/FontAwesome5_Brands.5818bbd0.ttf",
-    "static/media/FontAwesome5_Regular.ttf": "/nx-expo-poetry/static/media/FontAwesome5_Regular.c3146b35.ttf",
-    "static/media/FontAwesome5_Solid.ttf": "/nx-expo-poetry/static/media/FontAwesome5_Solid.32267f3b.ttf",
+    "static/media/FontAwesome5_Brands.ttf": "/nx-expo-poetry/static/media/FontAwesome5_Brands.9e138496.ttf",
+    "static/media/FontAwesome5_Regular.ttf": "/nx-expo-poetry/static/media/FontAwesome5_Regular.1017bce8.ttf",
+    "static/media/FontAwesome5_Solid.ttf": "/nx-expo-poetry/static/media/FontAwesome5_Solid.07c3313b.ttf",
     "static/media/Fontisto.ttf": "/nx-expo-poetry/static/media/Fontisto.c0edd688.ttf",
     "static/media/Foundation.ttf": "/nx-expo-poetry/static/media/Foundation.c0cbb004.ttf",
     "static/media/Ionicons.ttf": "/nx-expo-poetry/static/media/Ionicons.3517aeaa.ttf",
-    "static/media/MaterialCommunityIcons.ttf": "/nx-expo-poetry/static/media/MaterialCommunityIcons.a7629910.ttf",
+    "static/media/MaterialCommunityIcons.ttf": "/nx-expo-poetry/static/media/MaterialCommunityIcons.5d42b4e6.ttf",
     "static/media/MaterialIcons.ttf": "/nx-expo-poetry/static/media/MaterialIcons.120b4c7b.ttf",
-    "static/media/Octicons.ttf": "/nx-expo-poetry/static/media/Octicons.31d353da.ttf",
+    "static/media/Octicons.ttf": "/nx-expo-poetry/static/media/Octicons.6b742a23.ttf",
     "static/media/SimpleLineIcons.ttf": "/nx-expo-poetry/static/media/SimpleLineIcons.3ec13a24.ttf",
-    "static/media/Zocial.ttf": "/nx-expo-poetry/static/media/Zocial.5e415922.ttf"
+    "static/media/Zocial.ttf": "/nx-expo-poetry/static/media/Zocial.07fea2ac.ttf"
   },
   "entrypoints": [
     "static/js/runtime~app.74b91c38.js",
-    "static/js/2.6a3517d0.chunk.js",
-    "static/js/app.a65a4558.chunk.js"
+    "static/js/2.51bcd3f7.chunk.js",
+    "static/js/app.1c45bda3.chunk.js"
   ]
 }
