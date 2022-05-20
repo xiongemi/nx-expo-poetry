@@ -1,5 +1,4 @@
 {
-  "root": "apps/poetry-app",
   "sourceRoot": "apps/poetry-app/src",
   "projectType": "application",
   "targets": {

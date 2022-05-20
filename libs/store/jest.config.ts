@@ -1,4 +1,4 @@
-module.exports = {
+export default {
   displayName: 'store',
   resolver: '@nrwl/jest/plugins/resolver',
   preset: 'jest-expo',

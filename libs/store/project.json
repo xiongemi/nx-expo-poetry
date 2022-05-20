@@ -1,5 +1,4 @@
 {
-  "root": "libs/store",
   "sourceRoot": "libs/store/src",
   "projectType": "library",
   "tags": [],
