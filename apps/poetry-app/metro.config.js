@@ -11,7 +11,7 @@ module.exports = (async () => {
     (ext) => ext !== 'svg'
   );
   defaultConfig.resolver.sourceExts.push('svg');
-  const config = withNxMetro(defaultConfig, {
+  return withNxMetro(defaultConfig, {
     // Change this to true to see debugging info.
     // Useful if you have issues resolving modules
     debug: false,
@@ -20,5 +20,4 @@ module.exports = (async () => {
     projectRoot: __dirname,
     watchFolders: []
   });
-  return config;
 })();
