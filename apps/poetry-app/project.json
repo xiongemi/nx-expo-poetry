@@ -84,6 +84,10 @@
         "jestConfig": "apps/poetry-app/jest.config.ts",
         "passWithNoTests": true
       }
+    },
+    "eject": {
+      "executor": "@nrwl/expo:eject",
+      "options": {}
     }
   },
   "tags": []
