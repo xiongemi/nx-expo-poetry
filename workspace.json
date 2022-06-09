@@ -7,5 +7,6 @@
     "services": "libs/services",
     "store": "libs/store",
     "ui": "libs/ui"
-  }
+  },
+  "$schema": "./node_modules/nx/schemas/workspace-schema.json"
 }
