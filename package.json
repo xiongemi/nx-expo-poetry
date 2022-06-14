@@ -43,13 +43,13 @@
     "@nrwl/cli": "14.0.5",
     "@nrwl/detox": "14.2.4",
     "@nrwl/eslint-plugin-nx": "14.2.4",
-    "@nrwl/expo": "14.2.2",
+    "@nrwl/expo": "14.2.3",
     "@nrwl/jest": "14.2.4",
     "@nrwl/linter": "14.2.4",
     "@nrwl/nx-cloud": "14.0.8",
     "@nrwl/web": "14.2.4",
     "@nrwl/workspace": "14.2.4",
-    "@react-native-async-storage/async-storage": "~1.17.3",
+    "@react-native-async-storage/async-storage": "1.17.6",
     "@react-navigation/native": "^6.0.10",
     "@react-navigation/native-stack": "^6.6.2",
     "@reduxjs/toolkit": "^1.8.1",
@@ -94,3 +94,4 @@
     "webpack": "^4.46.0"
   }
 }
+
