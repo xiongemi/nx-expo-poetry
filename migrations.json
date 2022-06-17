@@ -1,12 +1,12 @@
 {
   "migrations": [
     {
-      "version": "14.1.2-beta.0",
       "cli": "nx",
-      "description": "Add target eject for expo projects in project.json",
-      "factory": "./src/migrations/update-14-1-2/add-eject-target-14-1-2",
-      "package": "@nrwl/expo",
-      "name": "add-eject-target-14-1-2"
+      "version": "14.3.4-beta.1",
+      "description": "Replace targetDependencies with targetDefaults",
+      "implementation": "./src/migrations/update-14-3-4/create-target-defaults",
+      "package": "nx",
+      "name": "14.3.4-create-target-defaults"
     }
   ]
 }
