@@ -8,6 +8,7 @@ import { Loading, AppRoutes, RootStackParamList } from '@nx-expo-poetry/ui';
 import AsyncStorage from '@react-native-async-storage/async-storage';
 import { NavigationContainer } from '@react-navigation/native';
 import { createNativeStackNavigator } from '@react-navigation/native-stack';
+import { useFonts } from 'expo-font';
 import { createMemoryHistory, History } from 'history';
 import React from 'react';
 import {
@@ -33,6 +34,14 @@ const App = () => {
   };
   const history: History = createMemoryHistory();
   const { store, persistor } = createRootStore(persistConfig, history);
+  
+  const [loaded] = useFonts({
+    Joan: require('../../assets/Joan-Regular.ttf'),
+  });
+
+  if (!loaded) {
+    return null;
+  }
 
   const theme = {
     ...DefaultTheme,

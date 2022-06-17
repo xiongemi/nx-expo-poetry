@@ -1,6 +1,4 @@
-
 import { LoadingStatus, Poem } from '@nx-expo-poetry/models';
-
 import { useNavigation } from '@react-navigation/native';
 import React, { useState } from 'react';
 import { SafeAreaView, ScrollView } from 'react-native';
@@ -88,7 +86,9 @@ export function PoemCard({
                     </Button>
                   ))}
                 </Centre>
-                <Paragraph>{poem?.lines?.map((line) => line + '\n')}</Paragraph>
+                <Paragraph style={{ fontFamily: 'Joan' }}>
+                  {poem?.lines?.map((line) => line + '\n')}
+                </Paragraph>
               </Card.Content>
             </Card>
           </ShowLoading>
