@@ -42,7 +42,7 @@
     "@nrwl/cli": "14.0.5",
     "@nrwl/detox": "14.3.6",
     "@nrwl/eslint-plugin-nx": "14.3.6",
-    "@nrwl/expo": "14.3.0",
+    "@nrwl/expo": "14.3.1",
     "@nrwl/jest": "14.3.6",
     "@nrwl/linter": "14.3.6",
     "@nrwl/nx-cloud": "14.1.2",
@@ -73,7 +73,7 @@
     "eslint-plugin-jsx-a11y": "6.5.1",
     "eslint-plugin-react": "7.27.0",
     "eslint-plugin-react-hooks": "4.3.0",
-    "expo-cli": "5.4.9",
+    "expo-cli": "5.4.11",
     "gh-pages": "^4.0.0",
     "history": "^5.2.0",
     "jest": "27.5.1",
@@ -93,3 +93,4 @@
     "webpack": "^4.46.0"
   }
 }
+
