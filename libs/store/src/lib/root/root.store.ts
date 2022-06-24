@@ -1,5 +1,4 @@
 import { configureStore } from '@reduxjs/toolkit';
-import { History } from 'history';
 import logger from 'redux-logger';
 import { persistStore, persistReducer, PersistConfig } from 'redux-persist';
 
@@ -11,11 +10,10 @@ declare const process: any;
 
 export const createRootStore = (
   persistConfig: PersistConfig<RootState>,
-  history: History
 ) => {
   const isDevelopment = process.env.NODE_ENV === 'development';
 
-  const rootReducer = createRootReducer(history);
+  const rootReducer = createRootReducer;
   const persistedReducer = persistReducer(persistConfig, rootReducer);
 
   const store = configureStore({

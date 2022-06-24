@@ -8,7 +8,6 @@ import { Loading, AppRoutes, RootStackParamList } from '@nx-expo-poetry/ui';
 import AsyncStorage from '@react-native-async-storage/async-storage';
 import { NavigationContainer } from '@react-navigation/native';
 import { createNativeStackNavigator } from '@react-navigation/native-stack';
-import { createMemoryHistory, History } from 'history';
 import React from 'react';
 import {
   DefaultTheme,
@@ -31,8 +30,7 @@ const App = () => {
     whitelist: [BOOKMARKS_FEATURE_KEY],
     transforms: [transformEntityStateToPersist],
   };
-  const history: History = createMemoryHistory();
-  const { store, persistor } = createRootStore(persistConfig, history);
+  const { store, persistor } = createRootStore(persistConfig);
 
   const theme = {
     ...DefaultTheme,
