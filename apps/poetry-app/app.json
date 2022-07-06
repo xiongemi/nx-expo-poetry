@@ -30,6 +30,6 @@
       "favicon": "./assets/favicon.png",
       "publicPath": "nx-expo-poetry"
     },
-    "plugins": ["sentry-expo"]
+    "plugins": []
   }
 }
