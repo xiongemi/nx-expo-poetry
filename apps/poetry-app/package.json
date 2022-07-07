@@ -26,7 +26,6 @@
     "expo-status-bar": "*",
     "expo-structured-headers": "*",
     "expo-updates": "*",
-    "history": "*",
     "react": "*",
     "react-native": "*",
     "react-native-gesture-handler": "*",
