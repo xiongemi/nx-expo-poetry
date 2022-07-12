@@ -12,13 +12,12 @@
       }
     },
     "preview": {
+      "distribution": "internal",
       "ios": {
-        "simulator": true,
-        "buildConfiguration": "Debug"
+        "simulator": true
       },
       "android": {
-        "buildType": "apk",
-        "gradleCommand": ":app:assembleDebug"
+        "buildType": "apk"
       }
     }
   },
