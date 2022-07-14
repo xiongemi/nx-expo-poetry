@@ -6,9 +6,12 @@
     "build-ios": {
       "executor": "@nrwl/detox:build",
       "options": {
-        "detoxConfiguration": "ios.sim.debug"
+        "detoxConfiguration": "ios.sim.eas"
       },
       "configurations": {
+        "local": {
+          "detoxConfiguration": "ios.sim.local"
+        },
         "production": {
           "detoxConfiguration": "ios.sim.release"
         }
@@ -17,9 +20,14 @@
     "test-ios": {
       "executor": "@nrwl/detox:test",
       "options": {
-        "detoxConfiguration": "ios.sim.debug"
+        "detoxConfiguration": "ios.sim.eas",
+        "buildTarget": "poetry-app-e2e:build-ios"
       },
       "configurations": {
+        "local": {
+          "detoxConfiguration": "ios.sim.local",
+          "buildTarget": "poetry-app-e2e:build-ios:local"
+        },
         "production": {
           "detoxConfiguration": "ios.sim.release",
           "buildTarget": "poetry-app-e2e:build-ios:prod"
@@ -29,9 +37,12 @@
     "build-android": {
       "executor": "@nrwl/detox:build",
       "options": {
-        "detoxConfiguration": "android.emu.debug"
+        "detoxConfiguration": "android.emu.eas"
       },
       "configurations": {
+        "local": {
+          "detoxConfiguration": "android.emu.local"
+        },
         "production": {
           "detoxConfiguration": "android.emu.release"
         }
@@ -40,13 +51,13 @@
     "test-android": {
       "executor": "@nrwl/detox:test",
       "options": {
-        "detoxConfiguration": "android.emu.debug",
+        "detoxConfiguration": "android.emu.eas",
         "buildTarget": "poetry-app-e2e:build-android"
       },
       "configurations": {
         "production": {
           "detoxConfiguration": "android.emu.release",
-          "buildTarget": "poetry-app-e2e:build-android:prod"
+          "buildTarget": "poetry-app-e2e:build-android:production"
         }
       }
     },

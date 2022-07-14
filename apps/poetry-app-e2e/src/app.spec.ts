@@ -5,7 +5,9 @@ describe('PoetryApp', () => {
     await device.reloadReactNative();
   });
 
-  it('should display welcome message', async () => {
-    await expect(element(by.id('heading'))).toHaveText('Welcome PoetryApp 👋');
+  it('should display heading', async () => {
+    await waitFor(element(by.text('Poem of the Day')))
+      .toBeVisible()
+      .withTimeout(5000);
   });
 });

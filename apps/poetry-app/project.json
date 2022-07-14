@@ -88,6 +88,20 @@
     "eject": {
       "executor": "@nrwl/expo:eject",
       "options": {}
+    },
+    "build": {
+      "executor": "@nrwl/expo:build",
+      "options": {}
+    },
+    "build-list": {
+      "executor": "@nrwl/expo:build-list",
+      "options": {}
+    },
+    "download": {
+      "executor": "@nrwl/expo:download",
+      "options": {
+        "output": "apps/poetry-app/dist"
+      }
     }
   },
   "tags": []

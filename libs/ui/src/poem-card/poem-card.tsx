@@ -1,4 +1,3 @@
-
 import { LoadingStatus, Poem } from '@nx-expo-poetry/models';
 
 import { useNavigation } from '@react-navigation/native';
@@ -54,11 +53,11 @@ export function PoemCard({
             hasError={loadingStatus === 'error'}
             reload={fetch}
           >
-            <Card>
+            <Card testID="poem-card">
               <Card.Title
+                testID="poem-card-title"
                 title={poem?.title}
                 subtitle={formattedDate}
-                children={undefined}
               />
               <Card.Cover source={{ uri: `https://picsum.photos/300/200` }} />
               <Card.Actions>
