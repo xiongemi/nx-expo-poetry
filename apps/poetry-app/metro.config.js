@@ -18,6 +18,6 @@ module.exports = (async () => {
     // all the file extensions used for imports other than 'ts', 'tsx', 'js', 'jsx'
     extensions: [],
     projectRoot: __dirname,
-    watchFolders: []
+    watchFolders: [],
   });
 })();

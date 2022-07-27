@@ -18,7 +18,6 @@ async function waitForLauncherMainScreen() {
     .withTimeout(LauncherMainScreenTimeout);
 }
 
-
 async function ensureThatLauncherMainScreenIsVisible() {
   if (device.getPlatform() === 'ios') {
     await expect(element(by.id('DevLauncherMainScreen'))).toBeVisible();

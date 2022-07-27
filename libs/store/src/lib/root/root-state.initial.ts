@@ -7,5 +7,5 @@ import { RootState } from './root-state.interface';
 export const initialRootState: RootState = {
   poemOfTheDay: initialPoemOfTheDayState,
   bookmarks: initialBookmarksState,
-  search: initialSearchState
+  search: initialSearchState,
 };

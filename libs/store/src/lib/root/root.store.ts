@@ -8,9 +8,7 @@ import { createRootReducer } from './root.reducer';
 
 declare const process: any;
 
-export const createRootStore = (
-  persistConfig: PersistConfig<RootState>,
-) => {
+export const createRootStore = (persistConfig: PersistConfig<RootState>) => {
   const isDevelopment = process.env.NODE_ENV === 'development';
 
   const rootReducer = createRootReducer;
