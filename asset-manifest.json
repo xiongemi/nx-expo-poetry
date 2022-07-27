@@ -1,18 +1,18 @@
 {
   "files": {
-    "app.js": "/nx-expo-poetry/static/js/app.1c45bda3.chunk.js",
-    "app.js.map": "/nx-expo-poetry/static/js/app.1c45bda3.chunk.js.map",
+    "app.js": "/nx-expo-poetry/static/js/app.d7be7c39.chunk.js",
+    "app.js.map": "/nx-expo-poetry/static/js/app.d7be7c39.chunk.js.map",
     "runtime~app.js": "/nx-expo-poetry/static/js/runtime~app.74b91c38.js",
     "runtime~app.js.map": "/nx-expo-poetry/static/js/runtime~app.74b91c38.js.map",
-    "static/js/2.51bcd3f7.chunk.js": "/nx-expo-poetry/static/js/2.51bcd3f7.chunk.js",
-    "static/js/2.51bcd3f7.chunk.js.map": "/nx-expo-poetry/static/js/2.51bcd3f7.chunk.js.map",
+    "static/js/2.69b77d23.chunk.js": "/nx-expo-poetry/static/js/2.69b77d23.chunk.js",
+    "static/js/2.69b77d23.chunk.js.map": "/nx-expo-poetry/static/js/2.69b77d23.chunk.js.map",
     "favicon-16.png": "/nx-expo-poetry/favicon-16.png",
     "favicon-32.png": "/nx-expo-poetry/favicon-32.png",
     "favicon.ico": "/nx-expo-poetry/favicon.ico",
     "index.html": "/nx-expo-poetry/index.html",
     "manifest.json": "/nx-expo-poetry/manifest.json",
     "serve.json": "/nx-expo-poetry/serve.json",
-    "static/js/2.51bcd3f7.chunk.js.LICENSE.txt": "/nx-expo-poetry/static/js/2.51bcd3f7.chunk.js.LICENSE.txt",
+    "static/js/2.69b77d23.chunk.js.LICENSE.txt": "/nx-expo-poetry/static/js/2.69b77d23.chunk.js.LICENSE.txt",
     "static/media/AntDesign.ttf": "/nx-expo-poetry/static/media/AntDesign.163adab9.ttf",
     "static/media/Entypo.ttf": "/nx-expo-poetry/static/media/Entypo.fc616934.ttf",
     "static/media/EvilIcons.ttf": "/nx-expo-poetry/static/media/EvilIcons.699664b3.ttf",
@@ -32,7 +32,7 @@
   },
   "entrypoints": [
     "static/js/runtime~app.74b91c38.js",
-    "static/js/2.51bcd3f7.chunk.js",
-    "static/js/app.1c45bda3.chunk.js"
+    "static/js/2.69b77d23.chunk.js",
+    "static/js/app.d7be7c39.chunk.js"
   ]
 }
