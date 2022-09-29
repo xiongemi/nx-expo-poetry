@@ -1,3 +1,4 @@
+/* eslint-disable */
 export default {
   displayName: 'services',
   resolver: '@nrwl/jest/plugins/resolver',

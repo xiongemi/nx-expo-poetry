@@ -1,3 +1,4 @@
+/* eslint-disable */
 export default {
   displayName: 'poetry-app',
   resolver: '@nrwl/jest/plugins/resolver',
@@ -9,5 +10,5 @@ export default {
   setupFilesAfterEnv: ['<rootDir>/test-setup.ts'],
   moduleNameMapper: {
     '.svg': '@nrwl/expo/plugins/jest/svg-mock',
-  }
+  },
 };
