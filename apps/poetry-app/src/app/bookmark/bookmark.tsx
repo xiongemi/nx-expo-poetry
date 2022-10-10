@@ -10,7 +10,7 @@ import {
   BookmarkProps,
 } from './bookmark.props';
 
-export function PoemResult({ poem, fetchBookmark, bookmark }: BookmarkProps) {
+export function Bookmark({ poem, fetchBookmark, bookmark }: BookmarkProps) {
   const date = new Date();
 
   const navigation = useNavigation();
@@ -43,4 +43,4 @@ export function PoemResult({ poem, fetchBookmark, bookmark }: BookmarkProps) {
   );
 }
 
-export default connect(mapStateToProps, mapDispatchToProps)(PoemResult);
+export default connect(mapStateToProps, mapDispatchToProps)(Bookmark);
