@@ -20293,7 +20293,7 @@ webpack@4.43.0:
     watchpack "^1.6.1"
     webpack-sources "^1.4.1"
 
-"webpack@^4 || ^5":
+webpack@4.46.0, "webpack@^4 || ^5":
   version "4.46.0"
   resolved "http://localhost:4873/webpack/-/webpack-4.46.0.tgz"
   integrity sha512-6jJuJjg8znb/xRItk7bkT0+Q7AHCYjjFnvKIWQPkNIOyRqoCGvkOs0ipeQzrqz4l5FtN5ZI/ukEHroeX/o1/5Q==
