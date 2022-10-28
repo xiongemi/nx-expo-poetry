@@ -79,15 +79,17 @@
     },
     "test": {
       "executor": "@nrwl/jest:jest",
-      "outputs": ["coverage/apps/poetry-app"],
+      "outputs": ["{workspaceRoot}/coverage/apps/poetry-app"],
       "options": {
         "jestConfig": "apps/poetry-app/jest.config.ts",
         "passWithNoTests": true
       }
     },
     "eject": {
-      "executor": "@nrwl/expo:eject",
-      "options": {}
+      "executor": "nx:run-commands",
+      "options": {
+        "command": "nx prebuild poetry-app"
+      }
     },
     "build": {
       "executor": "@nrwl/expo:build",
@@ -101,6 +103,31 @@
       "executor": "@nrwl/expo:download",
       "options": {
         "output": "apps/poetry-app/dist"
+      }
+    },
+    "update": {
+      "executor": "@nrwl/expo:update",
+      "options": {}
+    },
+    "prebuild": {
+      "executor": "@nrwl/expo:prebuild",
+      "options": {}
+    },
+    "install": {
+      "executor": "@nrwl/expo:install",
+      "options": {}
+    },
+    "export": {
+      "executor": "@nrwl/expo:export",
+      "options": {
+        "platform": "all",
+        "outputDir": "../../dist/apps/poetry-app"
+      }
+    },
+    "export-web": {
+      "executor": "@nrwl/expo:export",
+      "options": {
+        "bundler": "webpack"
       }
     }
   },

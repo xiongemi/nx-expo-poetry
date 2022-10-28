@@ -1,44 +1,28 @@
 {
   "migrations": [
     {
-      "version": "14.8.0-beta.0",
-      "description": "Migrates from @nrwl/workspace:run-commands to nx:run-commands",
+      "version": "14.5.1-beta.0",
       "cli": "nx",
-      "implementation": "./src/migrations/update-14-8-0/change-run-commands-executor",
-      "package": "@nrwl/workspace",
-      "name": "14-8-0-change-run-commands-executor"
+      "description": "Add target update for expo projects in project.json",
+      "factory": "./src/migrations/update-14-5-1/add-eas-update-target",
+      "package": "@nrwl/expo",
+      "name": "add-update-target-14-5-1"
     },
     {
-      "version": "14.5.5-beta.0",
+      "version": "15.0.3-beta.0",
       "cli": "nx",
-      "description": "Exclude jest.config.ts from tsconfig where missing.",
-      "factory": "./src/migrations/update-14-0-0/update-jest-config-ext",
-      "package": "@nrwl/jest",
-      "name": "exclude-jest-config-from-ts-config"
+      "description": "Change jest config preset tof expo projects",
+      "factory": "./src/migrations/update-15-0-3/change-jest-preset",
+      "package": "@nrwl/expo",
+      "name": "change-expo-jest-preset"
     },
     {
-      "version": "14.6.0-beta.0",
+      "version": "15.0.3-beta.0",
       "cli": "nx",
-      "description": "Update jest configs to support jest 28 changes (https://jestjs.io/docs/upgrading-to-jest28#configuration-options)",
-      "factory": "./src/migrations/update-14-6-0/update-configs-jest-28",
-      "package": "@nrwl/jest",
-      "name": "update-configs-jest-28"
-    },
-    {
-      "version": "14.6.0-beta.0",
-      "cli": "nx",
-      "description": "Update jest test files  to support jest 28 changes (https://jestjs.io/docs/upgrading-to-jest28)",
-      "factory": "./src/migrations/update-14-6-0/update-tests-jest-28",
-      "package": "@nrwl/jest",
-      "name": "update-tests-jest-28"
-    },
-    {
-      "cli": "nx",
-      "version": "14.7.6-beta.1",
-      "description": "Update usages of webpack executors to @nrwl/webpack",
-      "factory": "./src/migrations/update-14-7-6/update-webpack-executor",
-      "package": "@nrwl/web",
-      "name": "update-webpack-executor"
+      "description": "Add targets for @expo/cli and replace eject target",
+      "factory": "./src/migrations/update-15-0-3/add-new-expo-cli-targets",
+      "package": "@nrwl/expo",
+      "name": "add-new-expo-cli-targets"
     }
   ]
 }
