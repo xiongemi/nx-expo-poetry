@@ -70,5 +70,6 @@
     }
   },
   "tags": [],
-  "implicitDependencies": ["poetry-app"]
+  "implicitDependencies": ["poetry-app"],
+  "name": "poetry-app-e2e"
 }

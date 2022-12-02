@@ -23,5 +23,6 @@
       "executor": "@nrwl/expo:ensure-symlink",
       "options": {}
     }
-  }
+  },
+  "name": "ui"
 }
