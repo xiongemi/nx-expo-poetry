@@ -50,8 +50,10 @@ npm-debug.*
 *.mobileprovision
 *.orig.*
 web-build/
+cache/
 
-apps/peotry-e2e/artifacts
+apps/peotry-app-e2e/artifacts
+apps/poetry-app/.expo
 
 # key
 keys/

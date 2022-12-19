@@ -5,7 +5,6 @@
   "homepage": "https://xiongemi.github.io/nx-expo-poetry/",
   "scripts": {
     "eas-android": "EAS_LOCAL_BUILD_SKIP_CLEANUP=1 EAS_LOCAL_BUILD_WORKINGDIR=/Users/emilyxiong/Code/tmp/eas-expo-poetry-android eas build --platform android  --profile preview --local",
-    "eas-build-pre-install": "cd ../../ && cp yarn.lock ./apps/poetry-app/",
     "eas-ios": "EAS_LOCAL_BUILD_SKIP_CLEANUP=1 EAS_LOCAL_BUILD_WORKINGDIR=/Users/emilyxiong/Code/tmp/eas-expo-poetry-ios eas build --platform ios  --profile preview --local",
     "postinstall": "rm -r node_modules && cd ../../ && yarn install && yarn nx sync-deps poetry-app && yarn nx ensure-symlink poetry-app"
   },

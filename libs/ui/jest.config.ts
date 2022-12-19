@@ -10,5 +10,5 @@ export default {
   setupFilesAfterEnv: ['<rootDir>/test-setup.ts'],
   moduleNameMapper: {
     '.svg': '@nrwl/expo/plugins/jest/svg-mock',
-  }
+  },
 };

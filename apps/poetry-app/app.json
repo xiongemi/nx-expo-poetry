@@ -30,6 +30,11 @@
       "favicon": "./assets/favicon.png",
       "publicPath": "nx-expo-poetry"
     },
-    "plugins": []
+    "plugins": [],
+    "extra": {
+      "eas": {
+        "projectId": "127cd2bb-ac07-4442-b1f6-f5bdc9a6f46f"
+      }
+    }
   }
 }
