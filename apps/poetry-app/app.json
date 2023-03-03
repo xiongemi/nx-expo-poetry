@@ -28,8 +28,7 @@
     },
     "web": {
       "favicon": "./assets/favicon.png",
-      "publicPath": "nx-expo-poetry",
-      "bundler": "metro"
+      "publicPath": "nx-expo-poetry"
     },
     "plugins": [],
     "extra": {

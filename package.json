@@ -5,7 +5,6 @@
   "homepage": "https://xiongemi.github.io/nx-expo-poetry/",
   "license": "MIT",
   "scripts": {
-    "predeploy": "nx export-web poetry-app",
     "deploy": "gh-pages -d apps/poetry-app/dist",
     "start": "nx serve",
     "test": "nx test"
@@ -37,6 +36,7 @@
   },
   "devDependencies": {
     "@expo/cli": "0.6.2",
+    "@expo/vector-icons": "^13.0.0",
     "@expo/webpack-config": "18.0.1",
     "@nrwl/cli": "15.7.2",
     "@nrwl/detox": "15.7.2",
