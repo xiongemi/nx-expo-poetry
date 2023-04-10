@@ -20,8 +20,7 @@ To set this repository up, you need an Expo account with access to EAS. After th
 ## Commands
 
 - deploy to github page: `npm run deploy`
-- run the web app: `nx web poetry-app`
-- build the web app: `nx build-web poetry-app`
+- build the web app: `nx export-web poetry-app`
 - start expo server: `nx start poetry-app` or `npm run start`
 
 This project was generated using [Nx](https://nx.dev).
