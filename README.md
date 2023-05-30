@@ -2,7 +2,7 @@
 
 <p style="text-align: center;"><img src="https://github.com/xiongemi/nx-expo-poetry/blob/main/apps/poetry-app/assets/icon.png?raw=true" width="450"></p>
 
-A mobile app generated using [@nrwl/expo](https://www.npmjs.com/package/@nrwl/expo).
+A mobile app generated using [@nx/expo](https://www.npmjs.com/package/@nx/expo).
 
 Mobile:
 ![screenshot](https://github.com/xiongemi/nx-expo-poetry/blob/main/images/screenshot.png?raw=true)
@@ -40,7 +40,7 @@ Below are our core plugins:
 - [React](https://reactjs.org)
   - `npm install --save-dev @nrwl/react`
 - Web (no framework frontends)
-  - `npm install --save-dev @nrwl/web`
+  - `npm install --save-dev @nx/web`
 - [Angular](https://angular.io)
   - `npm install --save-dev @nrwl/angular`
 - [Nest](https://nestjs.com)

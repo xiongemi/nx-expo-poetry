@@ -1,18 +1,19 @@
 {
+  "name": "ui",
   "$schema": "../../node_modules/nx/schemas/project-schema.json",
   "sourceRoot": "libs/ui/src",
   "projectType": "library",
   "tags": [],
   "targets": {
     "lint": {
-      "executor": "@nrwl/linter:eslint",
+      "executor": "@nx/linter:eslint",
       "outputs": ["{options.outputFile}"],
       "options": {
         "lintFilePatterns": ["libs/ui/**/*.{ts,tsx,js,jsx}"]
       }
     },
     "test": {
-      "executor": "@nrwl/jest:jest",
+      "executor": "@nx/jest:jest",
       "outputs": ["{workspaceRoot}/coverage/libs/ui"],
       "options": {
         "jestConfig": "libs/ui/jest.config.ts",
@@ -20,9 +21,8 @@
       }
     },
     "ensure-symlink": {
-      "executor": "@nrwl/expo:ensure-symlink",
+      "executor": "@nx/expo:ensure-symlink",
       "options": {}
     }
-  },
-  "name": "ui"
+  }
 }

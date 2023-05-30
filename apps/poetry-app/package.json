@@ -10,7 +10,6 @@
   },
   "dependencies": {
     "@expo/metro-config": "*",
-    "@nrwl/expo": "*",
     "@react-native-async-storage/async-storage": "*",
     "@react-navigation/native": "*",
     "@react-navigation/native-stack": "*",
@@ -38,6 +37,7 @@
     "react-redux": "*",
     "redux-logger": "*",
     "redux-persist": "*",
-    "string-similarity": "*"
+    "string-similarity": "*",
+    "@nx/expo": "*"
   }
 }

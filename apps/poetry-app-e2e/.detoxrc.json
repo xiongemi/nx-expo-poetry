@@ -1,6 +1,13 @@
 {
-  "testRunner": "jest",
-  "runnerConfig": "jest.config.json",
+  "testRunner": {
+    "args": {
+      "$0": "jest",
+      "config": "./jest.config.json"
+    },
+    "jest": {
+      "setupTimeout": 120000
+    }
+  },
   "apps": {
     "ios.debug": {
       "type": "ios.app",
@@ -14,12 +21,12 @@
     },
     "ios.eas": {
       "type": "ios.app",
-      "build": "yarn nx run poetry-app:download --platform ios --distribution simulator --output=apps/poetry-app/dist/",
+      "build": "yarn nx run poetry-app:download --platform ios --distribution simulator --output=../../apps/poetry-app/dist/",
       "binaryPath": "../poetry-app/dist/PoemoftheDay.app"
     },
     "ios.local": {
       "type": "ios.app",
-      "build": "yarn nx run poetry-app:build --platform ios --profile preview --wait --local --no-interactive --output='./dist/'",
+      "build": "yarn nx run poetry-app:build --platform ios --profile preview --wait --local --no-interactive --output=../../apps/poetry-app/dist/PoetryApp.tar.gz",
       "binaryPath": "../poetry-app/dist/PoemoftheDay.app"
     },
     "android.debug": {
@@ -34,12 +41,12 @@
     },
     "android.eas": {
       "type": "android.apk",
-      "build": "yarn nx run poetry-app:download --platform android --output=apps/poetry-app/dist/",
+      "build": "yarn nx run poetry-app:download --platform android --distribution simulator --output=../../apps/poetry-app/dist/",
       "binaryPath": "../poetry-app/dist/PoemoftheDay.apk"
     },
     "android.local": {
       "type": "android.apk",
-      "build": "yarn nx run poetry-app:build --platform android --profile preview --wait --local --no-interactive --output=apps/poetry-app/dist/",
+      "build": "yarn nx run poetry-app:build --platform android --profile preview --wait --local --no-interactive --output=../../apps/poetry-app/dist/PoetryApp.apk",
       "binaryPath": "../poetry-app/dist/PoemoftheDay.apk"
     }
   },
