@@ -2,7 +2,7 @@
   "expo": {
     "name": "Poem of the Day",
     "slug": "poetry-app",
-    "version": "1.0.7",
+    "version": "1.0.8",
     "orientation": "portrait",
     "icon": "./assets/icon.png",
     "splash": {
@@ -24,14 +24,22 @@
         "backgroundColor": "#FFFFFF"
       },
       "package": "com.exiong.poetryapp",
-      "versionCode": 7
+      "versionCode": 8
     },
     "web": {
       "favicon": "./assets/favicon.png",
       "publicPath": "nx-expo-poetry",
       "bundler": "metro"
     },
-    "plugins": [],
+    "plugins": [
+      [
+        "@config-plugins/detox",
+        {
+          "skipProguard": false,
+          "subdomains": ["10.0.2.2", "localhost"]
+        }
+      ]
+    ],
     "extra": {
       "eas": {
         "projectId": "127cd2bb-ac07-4442-b1f6-f5bdc9a6f46f"

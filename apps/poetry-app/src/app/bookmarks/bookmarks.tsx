@@ -2,7 +2,7 @@ import { BookmarksEntity } from '@nx-expo-poetry/store';
 import { AppRoutes, Centre, FullHeight, Spacing } from '@nx-expo-poetry/ui';
 import { useNavigation } from '@react-navigation/native';
 import React, { useState } from 'react';
-import { SafeAreaView, ScrollView, View } from 'react-native';
+import { SafeAreaView, ScrollView, View, Text } from 'react-native';
 import { Avatar, Divider, Headline, Snackbar } from 'react-native-paper';
 import { connect } from 'react-redux';
 
@@ -78,7 +78,9 @@ export function Bookmarks({
           },
         }}
       >
-        Remove {currentlyRemovedBookmark?.poem?.title}
+        <Text>
+          Remove {currentlyRemovedBookmark?.poem?.title?.substring(0, 10)} ...
+        </Text>
       </Snackbar>
     </FullHeight>
   );

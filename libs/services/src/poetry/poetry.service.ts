@@ -1,4 +1,4 @@
-import { compareTwoStrings } from 'string-similarity';
+import { stringSimilarity } from "string-similarity-js";
 
 import { PoemResponse } from '../models/poem-response.interface';
 
@@ -74,10 +74,10 @@ export async function searchPoems(
   ]).then(([poems1, poems2]) => {
     console.log('poems2', poems2);
     poems1.forEach(
-      (poem) => (poem.similarity = compareTwoStrings(poem.title, searchQuery))
+      (poem) => (poem.similarity = stringSimilarity(poem.title, searchQuery))
     );
     poems2.map(
-      (poem) => (poem.similarity = compareTwoStrings(poem.author, searchQuery))
+      (poem) => (poem.similarity = stringSimilarity(poem.author, searchQuery))
     );
     return [...poems1, ...poems2].sort(
       (poem1: PoemResponse, poem2: PoemResponse) => {

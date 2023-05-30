@@ -10,13 +10,6 @@
         "port": 8081
       }
     },
-    "web": {
-      "executor": "@nx/expo:start",
-      "options": {
-        "port": 8081,
-        "web": true
-      }
-    },
     "serve": {
       "executor": "nx:run-commands",
       "options": {
@@ -94,7 +87,8 @@
     "export-web": {
       "executor": "@nx/expo:export",
       "options": {
-        "bundler": "metro"
+        "bundler": "metro",
+        "platform": "web"
       }
     }
   },

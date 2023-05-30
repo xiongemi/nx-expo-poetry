@@ -24,7 +24,6 @@
     "expo-splash-screen": "*",
     "expo-status-bar": "*",
     "expo-structured-headers": "*",
-    "expo-updates": "*",
     "react": "*",
     "react-native": "*",
     "react-native-gesture-handler": "*",
@@ -34,11 +33,9 @@
     "react-native-screens": "*",
     "react-native-svg": "*",
     "react-native-vector-icons": "*",
-    "react-native-web": "*",
     "react-redux": "*",
     "redux-logger": "*",
     "redux-persist": "*",
-    "string-similarity": "*",
     "@nx/expo": "*"
   }
 }
