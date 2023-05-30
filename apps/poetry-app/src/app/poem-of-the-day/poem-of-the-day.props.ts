@@ -1,7 +1,7 @@
 import { Poem } from '@nx-expo-poetry/models';
 import {
   RootState,
-  poemOfTheDaySelelctors,
+  poemOfTheDaySelectors,
   fetchPoemOfTheDay,
   bookmarksActions,
 } from '@nx-expo-poetry/store';
@@ -9,8 +9,8 @@ import { AnyAction, ThunkDispatch } from '@reduxjs/toolkit';
 
 const mapStateToProps = (state: RootState) => {
   return {
-    poem: poemOfTheDaySelelctors.getPoemOfTheDay(state),
-    loadingStatus: poemOfTheDaySelelctors.getPoemOfTheDayLoadingStatus(state),
+    poem: poemOfTheDaySelectors.getPoemOfTheDay(state),
+    loadingStatus: poemOfTheDaySelectors.getPoemOfTheDayLoadingStatus(state),
   };
 };
 

@@ -33,7 +33,7 @@ export function PoemResult({ searchResultById, bookmark }: PoemResultProps) {
 
   return (
     <PoemCard
-      loadingStatus={'loaded'}
+      loadingStatus='loaded'
       formattedDate={formattedDate}
       poem={poem}
       bookmark={bookmark}

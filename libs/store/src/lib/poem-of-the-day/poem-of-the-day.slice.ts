@@ -86,7 +86,7 @@ const getPoemOfTheDayLoadingStatus = createSelector(
   (state: PoemOfTheDayState): LoadingStatus => state.loadingStatus
 );
 
-export const poemOfTheDaySelelctors = {
+export const poemOfTheDaySelectors = {
   getPoemOfTheDayState,
   getPoemOfTheDay,
   getPoemOfTheDayLoadingStatus,

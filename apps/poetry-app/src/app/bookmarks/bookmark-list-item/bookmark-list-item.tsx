@@ -1,6 +1,6 @@
 import { BookmarksEntity } from '@nx-expo-poetry/store';
 import React from 'react';
-import { List, IconButton, MD3Colors } from 'react-native-paper';
+import { List, IconButton, useTheme } from 'react-native-paper';
 
 export interface BookmarkListItemProps {
   bookmark: BookmarksEntity;
@@ -13,6 +13,7 @@ export function BookmarkListItem({
   removeBookmark,
   onPress,
 }: BookmarkListItemProps) {
+  const theme = useTheme();
   return (
     <List.Item
       title={bookmark.poem.title}
@@ -26,7 +27,7 @@ export function BookmarkListItem({
         <IconButton
           size={30}
           icon="remove-circle"
-          color={MD3Colors.error50}
+          color={theme.colors.error}
           onPress={() => removeBookmark(bookmark)}
         />
       )}
