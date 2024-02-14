@@ -8,47 +8,42 @@
       "executor": "@nx/expo:start",
       "options": {
         "port": 8081
-      }
+      },
+      "dependsOn": ["sync-deps"]
     },
     "serve": {
       "executor": "nx:run-commands",
       "options": {
-        "command": "nx start poetry-app"
+        "command": "nx start poetry-app --web"
       }
     },
     "run-ios": {
       "executor": "@nx/expo:run",
       "options": {
         "platform": "ios"
-      }
+      },
+      "dependsOn": ["sync-deps"]
     },
     "run-android": {
       "executor": "@nx/expo:run",
       "options": {
         "platform": "android"
-      }
+      },
+      "dependsOn": ["sync-deps"]
     },
     "sync-deps": {
       "executor": "@nx/expo:sync-deps",
       "options": {}
     },
-    "ensure-symlink": {
-      "executor": "@nx/expo:ensure-symlink",
-      "options": {}
-    },
     "lint": {
-      "executor": "@nx/linter:eslint",
-      "outputs": ["{options.outputFile}"],
-      "options": {
-        "lintFilePatterns": ["apps/poetry-app/**/*.{ts,tsx,js,jsx}"]
-      }
+      "executor": "@nx/eslint:lint",
+      "outputs": ["{options.outputFile}"]
     },
     "test": {
       "executor": "@nx/jest:jest",
       "outputs": ["{workspaceRoot}/coverage/apps/poetry-app"],
       "options": {
-        "jestConfig": "apps/poetry-app/jest.config.ts",
-        "passWithNoTests": true
+        "jestConfig": "apps/poetry-app/jest.config.ts"
       }
     },
     "build": {
@@ -71,7 +66,8 @@
     },
     "prebuild": {
       "executor": "@nx/expo:prebuild",
-      "options": {}
+      "options": {},
+      "dependsOn": ["sync-deps"]
     },
     "install": {
       "executor": "@nx/expo:install",
@@ -81,15 +77,10 @@
       "executor": "@nx/expo:export",
       "options": {
         "platform": "all",
-        "outputDir": "../../dist/apps/poetry-app"
-      }
-    },
-    "export-web": {
-      "executor": "@nx/expo:export",
-      "options": {
-        "bundler": "metro",
-        "platform": "web"
-      }
+        "outputDir": "dist/apps/poetry-app"
+      },
+      "dependsOn": ["sync-deps"],
+      "outputs": ["{options.outputDir}"]
     }
   },
   "tags": []

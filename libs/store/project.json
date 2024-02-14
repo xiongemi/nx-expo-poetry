@@ -6,18 +6,14 @@
   "tags": [],
   "targets": {
     "lint": {
-      "executor": "@nx/linter:eslint",
-      "outputs": ["{options.outputFile}"],
-      "options": {
-        "lintFilePatterns": ["libs/store/**/*.{ts,tsx,js,jsx}"]
-      }
+      "executor": "@nx/eslint:lint",
+      "outputs": ["{options.outputFile}"]
     },
     "test": {
       "executor": "@nx/jest:jest",
       "outputs": ["{workspaceRoot}/coverage/libs/store"],
       "options": {
-        "jestConfig": "libs/store/jest.config.ts",
-        "passWithNoTests": true
+        "jestConfig": "libs/store/jest.config.ts"
       }
     }
   }

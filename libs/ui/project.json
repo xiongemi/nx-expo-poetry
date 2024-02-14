@@ -6,23 +6,15 @@
   "tags": [],
   "targets": {
     "lint": {
-      "executor": "@nx/linter:eslint",
-      "outputs": ["{options.outputFile}"],
-      "options": {
-        "lintFilePatterns": ["libs/ui/**/*.{ts,tsx,js,jsx}"]
-      }
+      "executor": "@nx/eslint:lint",
+      "outputs": ["{options.outputFile}"]
     },
     "test": {
       "executor": "@nx/jest:jest",
       "outputs": ["{workspaceRoot}/coverage/libs/ui"],
       "options": {
-        "jestConfig": "libs/ui/jest.config.ts",
-        "passWithNoTests": true
+        "jestConfig": "libs/ui/jest.config.ts"
       }
-    },
-    "ensure-symlink": {
-      "executor": "@nx/expo:ensure-symlink",
-      "options": {}
     }
   }
 }
