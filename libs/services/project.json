@@ -7,11 +7,15 @@
   "targets": {
     "lint": {
       "executor": "@nx/eslint:lint",
-      "outputs": ["{options.outputFile}"]
+      "outputs": [
+        "{options.outputFile}"
+      ]
     },
     "test": {
       "executor": "@nx/jest:jest",
-      "outputs": ["{workspaceRoot}/coverage/libs/services"],
+      "outputs": [
+        "{workspaceRoot}/coverage/libs/services"
+      ],
       "options": {
         "jestConfig": "libs/services/jest.config.ts"
       }

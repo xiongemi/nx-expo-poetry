@@ -3,13 +3,17 @@
   "$schema": "../../node_modules/nx/schemas/project-schema.json",
   "sourceRoot": "apps/poetry-app/src",
   "projectType": "application",
+  "tags": [],
   "targets": {
     "start": {
       "executor": "@nx/expo:start",
       "options": {
         "port": 8081
       },
-      "dependsOn": ["sync-deps"]
+      "dependsOn": [
+        "ensure-symlink",
+        "sync-deps"
+      ]
     },
     "serve": {
       "executor": "nx:run-commands",
@@ -22,14 +26,20 @@
       "options": {
         "platform": "ios"
       },
-      "dependsOn": ["sync-deps"]
+      "dependsOn": [
+        "ensure-symlink",
+        "sync-deps"
+      ]
     },
     "run-android": {
       "executor": "@nx/expo:run",
       "options": {
         "platform": "android"
       },
-      "dependsOn": ["sync-deps"]
+      "dependsOn": [
+        "ensure-symlink",
+        "sync-deps"
+      ]
     },
     "sync-deps": {
       "executor": "@nx/expo:sync-deps",
@@ -37,11 +47,15 @@
     },
     "lint": {
       "executor": "@nx/eslint:lint",
-      "outputs": ["{options.outputFile}"]
+      "outputs": [
+        "{options.outputFile}"
+      ]
     },
     "test": {
       "executor": "@nx/jest:jest",
-      "outputs": ["{workspaceRoot}/coverage/apps/poetry-app"],
+      "outputs": [
+        "{workspaceRoot}/coverage/apps/poetry-app"
+      ],
       "options": {
         "jestConfig": "apps/poetry-app/jest.config.ts"
       }
@@ -67,7 +81,10 @@
     "prebuild": {
       "executor": "@nx/expo:prebuild",
       "options": {},
-      "dependsOn": ["sync-deps"]
+      "dependsOn": [
+        "ensure-symlink",
+        "sync-deps"
+      ]
     },
     "install": {
       "executor": "@nx/expo:install",
@@ -79,9 +96,13 @@
         "platform": "all",
         "outputDir": "dist/apps/poetry-app"
       },
-      "dependsOn": ["sync-deps"],
-      "outputs": ["{options.outputDir}"]
+      "dependsOn": [
+        "ensure-symlink",
+        "sync-deps"
+      ],
+      "outputs": [
+        "{options.outputDir}"
+      ]
     }
-  },
-  "tags": []
+  }
 }
