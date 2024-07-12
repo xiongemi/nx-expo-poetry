@@ -59,3 +59,4 @@ apps/poetry-app/.expo
 # key
 keys/
 .nx/cache
+.nx/workspace-data

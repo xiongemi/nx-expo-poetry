@@ -4,9 +4,7 @@
   "sourceRoot": "apps/poetry-app-e2e/src",
   "projectType": "application",
   "tags": [],
-  "implicitDependencies": [
-    "poetry-app"
-  ],
+  "implicitDependencies": ["poetry-app"],
   "targets": {
     "build-ios": {
       "executor": "@nx/detox:build",
@@ -68,9 +66,7 @@
     },
     "lint": {
       "executor": "@nx/eslint:lint",
-      "outputs": [
-        "{options.outputFile}"
-      ]
+      "outputs": ["{options.outputFile}"]
     }
   }
 }

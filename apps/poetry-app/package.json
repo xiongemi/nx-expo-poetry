@@ -41,7 +41,17 @@
     "react-dom": "*",
     "react-native-svg-transformer": "*",
     "sentry-expo": "*",
-    "tslib": "*"
+    "tslib": "*",
+    "@nx/devkit": "*",
+    "@nx/react": "*",
+    "@nx/webpack": "*",
+    "chalk": "*",
+    "enhanced-resolve": "*",
+    "fs-extra": "*",
+    "metro-config": "*",
+    "metro-resolver": "*",
+    "node-fetch": "*",
+    "tsconfig-paths": "*"
   },
   "devDependencies": {
     "@config-plugins/detox": "*",
